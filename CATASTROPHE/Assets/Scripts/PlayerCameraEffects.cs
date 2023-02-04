@@ -9,14 +9,21 @@ public class PlayerCameraEffects : MonoBehaviour
 
     private CinemachineVirtualCamera virtualCamera;
 
+    private float cameraOrthoSize;
+
     private float shakeTimer;
     private float shakeTimerMax;
     private float startingShakeIntensity;
+
+    private float punchTimer;
+    private float punchTimerMax;
+    private float startingPunchIntensity;
 
     private void Awake()
     {
         Instance = this;
         virtualCamera = GetComponent<CinemachineVirtualCamera>();
+        cameraOrthoSize = virtualCamera.m_Lens.OrthographicSize;
     }
 
     public void ShakeCamera (float intensity, float time)
@@ -31,6 +38,15 @@ public class PlayerCameraEffects : MonoBehaviour
         shakeTimer = time;
     }
 
+    public void PunchCamera(float intensity, float time)
+    {
+        virtualCamera.m_Lens.OrthographicSize -= intensity;
+
+        startingPunchIntensity = virtualCamera.m_Lens.OrthographicSize - intensity;
+        punchTimerMax = time;
+        punchTimer = time;
+    }
+
     private void Update()
     {
         if (shakeTimer > 0)
@@ -41,9 +57,17 @@ public class PlayerCameraEffects : MonoBehaviour
                 CinemachineBasicMultiChannelPerlin perlin = 
                     virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
                 
-                perlin.m_AmplitudeGain = 0f;
-                Mathf.Lerp(startingShakeIntensity, 0f, (1 - (shakeTimer/shakeTimerMax)));
+                perlin.m_AmplitudeGain = Mathf.Lerp(startingShakeIntensity, 0f, (1 - (shakeTimer/shakeTimerMax)));
 
+            }
+        }
+
+        if (punchTimer > 0)
+        {
+            punchTimer -= Time.deltaTime;
+            if (punchTimer <= 0)
+            {
+                virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(startingPunchIntensity, cameraOrthoSize, (1 - (punchTimer / punchTimerMax)));
             }
         }
     }

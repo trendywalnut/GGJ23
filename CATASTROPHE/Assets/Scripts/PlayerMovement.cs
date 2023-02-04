@@ -63,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isCooldownDone)
         {
-            //Debug.Log("Dashed");            
+            //Debug.Log("Dashed");
+            PlayerCameraEffects.Instance.PunchCamera(.15f, dashTime);
             playerPosition = new Vector2(transform.position.x, transform.position.y);
             dashDirection = mousePosition - playerPosition;
 
