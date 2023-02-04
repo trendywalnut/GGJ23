@@ -416,6 +416,7 @@ MonoBehaviour:
   dashSpeed: 75
   dashTime: 0.05
   dashCooldown: 0.3
+  cameraPunchIntensity: 0.1
   mainCam: {fileID: 7311764271837923168}
 --- !u!50 &7311764272950393479
 Rigidbody2D:

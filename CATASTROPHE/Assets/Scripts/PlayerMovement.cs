@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
+    [SerializeField] private float cameraPunchIntensity;
     
     private float dashTimer;
     private float cooldownTimer;
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         if (isCooldownDone)
         {
             //Debug.Log("Dashed");
-            PlayerCameraEffects.Instance.PunchCamera(.15f, dashTime);
+            PlayerCameraEffects.Instance.PunchCamera(cameraPunchIntensity, dashTime);
             playerPosition = new Vector2(transform.position.x, transform.position.y);
             dashDirection = mousePosition - playerPosition;
 
