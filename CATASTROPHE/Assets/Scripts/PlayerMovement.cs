@@ -40,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
         if (cooldownTimer <= 0)
             isCooldownDone = true;
         else if (cooldownTimer > 0)
+        {
             cooldownTimer -= Time.deltaTime;
+        }
 
         if (canDash)
         {

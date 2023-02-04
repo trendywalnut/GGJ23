@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  dashSpeed: 15
+  dashSpeed: 20
   dashTime: 0.2
   dashCooldown: 1
   mainCam: {fileID: 1490616326}
