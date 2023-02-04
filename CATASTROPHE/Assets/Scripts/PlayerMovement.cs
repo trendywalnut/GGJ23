@@ -34,15 +34,13 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = playerInput.playerMap.Movement.ReadValue<Vector2>(); // Reads Vector2 from WASD or Left Stick
         mousePosition = mainCam.ScreenToWorldPoint(playerInput.playerMap.Mouse.ReadValue<Vector2>());
-        activeMoveSpeed = moveInput * moveSpeed;
-        rb.velocity = activeMoveSpeed;
+        //activeMoveSpeed = moveInput * moveSpeed;
+        rb.velocity = moveInput * moveSpeed;
 
         if (cooldownTimer <= 0)
             isCooldownDone = true;
         else if (cooldownTimer > 0)
-        {
             cooldownTimer -= Time.deltaTime;
-        }
 
         if (canDash)
         {
