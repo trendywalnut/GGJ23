@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = false;
     private bool isCooldownDone = false;
 
+    public bool isDashing = false;
+
     private void Awake()
     {
         playerInput = new PlayerInput();
@@ -63,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isCooldownDone)
         {
+            StartCoroutine(DashAttackTime());
             Debug.Log("Dashed");
             playerPosition = new Vector2(transform.position.x, transform.position.y);
             dashDirection = mousePosition - playerPosition;
@@ -71,6 +74,13 @@ public class PlayerMovement : MonoBehaviour
             dashTimer = dashTime;
             cooldownTimer = dashCooldown;
         }
+    }
+
+    IEnumerator DashAttackTime()
+    {
+        isDashing = true;
+        yield return new WaitForSeconds(dashTime);
+        isDashing = false;
     }
 
     private void OnEnable()
