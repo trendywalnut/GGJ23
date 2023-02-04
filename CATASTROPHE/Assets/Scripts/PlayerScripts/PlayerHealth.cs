@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public static PlayerHealth Instance { get; private set; }
+
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
 
+
+
     private void Awake()
     {
+        Instance = this;
         currentHealth = maxHealth;
     }
 
