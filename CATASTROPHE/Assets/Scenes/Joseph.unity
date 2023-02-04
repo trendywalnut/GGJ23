@@ -416,26 +416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100903926, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_AmplitudeGain
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100903926, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_FrequencyGain
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100903926, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_PivotOffset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100903926, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_PivotOffset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100903926, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_PivotOffset.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7311764271283245002, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
       propertyPath: m_RootOrder
       value: 1

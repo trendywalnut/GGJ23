@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7311764271461166120}
   - component: {fileID: 7311764271461166123}
+  - component: {fileID: 1631988559}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 10
-    NearClipPlane: 0.3
+    NearClipPlane: 0
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -104,6 +105,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 7311764273151110293}
+--- !u!114 &1631988559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311764271461166122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4021934256f02a4798189c0db7d9045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7311764271837923170
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +175,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -282,6 +295,7 @@ GameObject:
   - component: {fileID: 7311764272950393478}
   - component: {fileID: 7311764272950393479}
   - component: {fileID: 6458029711712008328}
+  - component: {fileID: 436895203}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -450,6 +464,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &436895203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311764272950393530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df4cefe3c99ec845a386144d648f77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
 --- !u!1 &7311764273151110292
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +538,7 @@ MonoBehaviour:
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0
-  m_FrequencyGain: 0
+  m_FrequencyGain: 30
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &7311764273295016610
 GameObject:

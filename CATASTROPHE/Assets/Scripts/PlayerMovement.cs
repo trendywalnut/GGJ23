@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isCooldownDone)
         {
-            //Debug.Log("Dashed");
+            //Debug.Log("Dashed");            
             playerPosition = new Vector2(transform.position.x, transform.position.y);
             dashDirection = mousePosition - playerPosition;
 
