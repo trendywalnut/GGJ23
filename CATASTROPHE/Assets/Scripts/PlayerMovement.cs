@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
+    
     private float dashTimer;
     private float cooldownTimer;
 
@@ -19,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 moveInput;
     private Vector2 mousePosition;
-    private Vector2 activeMoveSpeed;
+    private Vector2 playerPosition;
+    private Vector2 dashDirection;
 
     private bool canDash = false;
     private bool isCooldownDone = false;
@@ -34,35 +36,36 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = playerInput.playerMap.Movement.ReadValue<Vector2>(); // Reads Vector2 from WASD or Left Stick
         mousePosition = mainCam.ScreenToWorldPoint(playerInput.playerMap.Mouse.ReadValue<Vector2>());
-        activeMoveSpeed = moveInput * moveSpeed;
-        rb.velocity = activeMoveSpeed;
+        rb.velocity = moveInput.normalized * moveSpeed;
 
+        if (cooldownTimer > 0)
+        {
+            isCooldownDone = false;
+            cooldownTimer -= Time.deltaTime;
+        }            
         if (cooldownTimer <= 0)
             isCooldownDone = true;
-        else if (cooldownTimer > 0)
-        {
-            cooldownTimer -= Time.deltaTime;
-        }
 
         if (canDash)
         {
             if (dashTimer > 0)
                 dashTimer -= Time.deltaTime;
-
-            Vector2 playerPosition = new Vector2(transform.position.x, transform.position.y);
-            Vector2 dashDirection = mousePosition - playerPosition;
             rb.velocity = dashDirection.normalized * dashSpeed;
 
             if (dashTimer <= 0)
                 canDash = false;
         }
+
+        Debug.Log(cooldownTimer);
     }
 
     private void OnDash()
     {
-        //Debug.Log("Dashed");
         if (isCooldownDone)
         {
+            playerPosition = new Vector2(transform.position.x, transform.position.y);
+            dashDirection = mousePosition - playerPosition;
+
             canDash = true;
             dashTimer = dashTime;
             cooldownTimer = dashCooldown;

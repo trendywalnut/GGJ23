@@ -252,10 +252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e047263435bdaac44855a2970cf533a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  dashSpeed: 20
-  dashTime: 0.2
-  dashCooldown: 1
+  moveSpeed: 12
+  dashSpeed: 75
+  dashTime: 0.05
+  dashCooldown: 0.3
   mainCam: {fileID: 1490616326}
 --- !u!50 &436895201
 Rigidbody2D:
@@ -331,7 +331,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
