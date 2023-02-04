@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public static PlayerHealth Instance { get; private set; }
+
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
+
+
+
+    private void Awake()
+    {
+        Instance = this;
+        currentHealth = maxHealth;
+    }
 
     public void GainHealth(int healAmount)
     {
@@ -21,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
         if (currentHealth - damageAmount <= 0)
         {
             //Lose state
@@ -29,6 +40,14 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damageAmount;
         }
-
     }
+
+    //Debug Testing
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.H))
+    //    {
+    //        TakeDamage(1);
+    //    }
+    //}
 }
