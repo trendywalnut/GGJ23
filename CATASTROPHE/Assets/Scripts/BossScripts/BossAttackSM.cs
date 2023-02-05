@@ -63,7 +63,7 @@ public class BossAttackSM : StateMachine
     {
         base.Update();
 
-        if ((BossHealth.Instance.currentHealth / BossHealth.Instance.maxHealth) <= 0.5f)
+        if ((BossHealth.Instance.currentHealth <= (BossHealth.Instance.maxHealth/2)))
         {
             isHalfHealth = true;
             idleTime /= 2;
