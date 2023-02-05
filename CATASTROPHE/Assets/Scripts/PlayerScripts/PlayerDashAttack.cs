@@ -10,6 +10,9 @@ public class PlayerDashAttack : MonoBehaviour
     private IDamageable enemy;
     private IDamageable boss;
     private PlayerMovement _playerMovement;
+
+    //VFX
+    //[SerializeField] private GameObject dashHitVFX;
     void Start()
     {
         _playerMovement = GetComponentInParent<PlayerMovement>();
@@ -21,12 +24,18 @@ public class PlayerDashAttack : MonoBehaviour
         {
             enemy = other.GetComponent<IDamageable>();
             enemy?.TakeDamage(dashAttackDamage);
+
+            //instantiate VFX
+            Instantiate(Resources.Load("VFX_Hit_Slash"), other.gameObject.transform.position, gameObject.transform.rotation);
         }
 
         if (other.CompareTag("Boss") && _playerMovement.isDashing)
         {
             boss = other.GetComponent<IDamageable>();
             boss?.TakeDamage(dashAttackDamage);
+
+            //instantiate VFX
+            Instantiate(Resources.Load("VFX_Hit_Slash"), other.gameObject.transform.position, gameObject.transform.rotation);
         }
     }
 }
