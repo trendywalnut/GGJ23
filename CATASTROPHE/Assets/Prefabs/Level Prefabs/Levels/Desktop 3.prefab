@@ -609,18 +609,18 @@ PrefabInstance:
     - target: {fileID: 3100542993851427038, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 148345016a9e84e4eaef867065ea0b33, type: 3}
+      objectReference: {fileID: 21300000, guid: 4b64941a216784a998d97de53a9fb9e4, type: 3}
     - target: {fileID: 3273709742022795333, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3273709742022795333, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_text
-      value: Script_rough
+      value: Unity 2020.4.20
       objectReference: {fileID: 0}
     - target: {fileID: 5237038952252213279, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1257,14 +1257,14 @@ PrefabInstance:
     - target: {fileID: 3100542993851427038, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bba2809a9e9b3264fad067d18e6c913d, type: 3}
+      objectReference: {fileID: 21300000, guid: 854082c6cef3f42f69be8d5d5f37c921, type: 3}
     - target: {fileID: 3273709742022795333, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3273709742022795333, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_text
@@ -2923,7 +2923,15 @@ PrefabInstance:
     - target: {fileID: 3100542993851427038, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4e1f8e9ee3eed744598075ad814ff02f, type: 3}
+      objectReference: {fileID: 21300000, guid: 13a9d765e475e45549bb0a8ffab32251, type: 3}
+    - target: {fileID: 3273709742022795333, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273709742022795333, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 289838cfcf7196a418023739e2dd8ce2, type: 3}
       propertyPath: m_text
       value: Minecraft
