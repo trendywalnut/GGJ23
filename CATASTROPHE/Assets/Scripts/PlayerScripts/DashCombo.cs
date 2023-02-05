@@ -30,7 +30,7 @@ public class DashCombo : MonoBehaviour
     {
         comboNum++;
         changed = true;
-        
+        comboText.transform.DOShakePosition(0.5f, 10f, 10, 20);
     }
 
     IEnumerator ResetCombo()
