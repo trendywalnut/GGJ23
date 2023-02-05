@@ -45,14 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveList:
-  - meleeEnemiesToSpawn: 4
-    rangedEnemiesToSpawn: 6
+  - meleeEnemiesToSpawn: 1
+    rangedEnemiesToSpawn: 3
     totalEnemies: 0
   enemySpawner: {fileID: 0}
   aliveEnemies: 0
   waveNumber: 0
   allWavesFinished: 0
   timeBetweenWaves: 0
+  levelToLoad: 0
 --- !u!1 &9163457245478112964
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ MonoBehaviour:
   popUpManager: {fileID: 0}
   bossTransform: {fileID: 9163457245950586479}
   idleTime: 1.7
-  timeBetweenRangeAttacks: 0.7
+  timeBetweenRangeAttacks: 1.3
   timeToMeleeAttack: 2.5
   timeBetweenRollingMelees: 0.8
   meleeDamage: 1
@@ -283,6 +284,7 @@ MonoBehaviour:
   rightMoveBound: {fileID: 9163457246752681156}
   bossRb: {fileID: 9163457245950586475}
   moveSpeed: 5
+  halfHealthMoveSpeed: 8
 --- !u!50 &9163457245950586475
 Rigidbody2D:
   serializedVersion: 4

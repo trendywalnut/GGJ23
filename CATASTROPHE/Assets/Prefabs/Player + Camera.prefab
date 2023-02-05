@@ -456,7 +456,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  timeForIFrames: 0.8
   invulnerable: 0
+  inIFrames: 0
 --- !u!70 &7778104590455929228
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
