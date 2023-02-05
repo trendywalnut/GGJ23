@@ -7,6 +7,9 @@ public class PlayerDashAttack : MonoBehaviour
     [Header("Dash Attack Damage (1 is default)")]
     [SerializeField] private int dashAttackDamage = 1;
 
+    [Header("Combo Script")]
+    [SerializeField] private DashCombo dashCombo;
+
     private IDamageable enemy;
     private IDamageable boss;
     private PlayerMovement _playerMovement;
@@ -27,6 +30,7 @@ public class PlayerDashAttack : MonoBehaviour
 
             //instantiate VFX
             Instantiate(Resources.Load("VFX_Hit_Slash"), other.gameObject.transform.position, gameObject.transform.rotation);
+            dashCombo.IncreaseCombo();
         }
 
         if (other.CompareTag("Boss") && _playerMovement.isDashing)
@@ -36,6 +40,7 @@ public class PlayerDashAttack : MonoBehaviour
 
             //instantiate VFX
             Instantiate(Resources.Load("VFX_Hit_Slash"), other.gameObject.transform.position, gameObject.transform.rotation);
+            dashCombo.IncreaseCombo();
         }
     }
 }
