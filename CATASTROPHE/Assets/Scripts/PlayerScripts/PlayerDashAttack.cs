@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerDashAttack : MonoBehaviour
 {
-    [SerializeField] private float dashAttackDamage;
+    [Header("Dash Attack Damage (1 is default)")]
+    [SerializeField] private int dashAttackDamage = 1;
+
+    private IDamageable enemy;
     private PlayerMovement _playerMovement;
     void Start()
     {
@@ -13,9 +16,12 @@ public class PlayerDashAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Attack");
         if (CompareTag("Enemy"))
         {
-            //do damage
+            Debug.Log("HIT!!!!!");
+            enemy = other.GetComponent<IDamageable>();
+            enemy?.TakeDamage(dashAttackDamage);
         }
     }
 }
