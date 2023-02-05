@@ -7,10 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: meleeai
+  m_Name: rangedaggressiveai_1
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_ValidKeywords:
   - HITEFFECT_ON
+  - OUTBASE8DIR_ON
+  - OUTBASEPIXELPERF_ON
+  - OUTBASE_ON
   - PIXELATE_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -135,8 +138,8 @@ Material:
     - _GreyscaleOutline: 0
     - _HandDrawnAmount: 10
     - _HandDrawnSpeed: 5
-    - _HitEffectBlend: 0.39
-    - _HitEffectGlow: 2.3
+    - _HitEffectBlend: 0.54
+    - _HitEffectGlow: 1.94
     - _HologramBlend: 1
     - _HologramMaxAlpha: 0.75
     - _HologramMinAlpha: 0.1
@@ -167,7 +170,7 @@ Material:
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
     - _OutlineGlow: 1.5
-    - _OutlinePixelWidth: 1
+    - _OutlinePixelWidth: 4.51
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
     - _OutlineWidth: 0.004
@@ -226,7 +229,7 @@ Material:
     - _GradTopLeftCol: {r: 1, g: 0, b: 0, a: 1}
     - _GradTopRightCol: {r: 1, g: 1, b: 0, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HitEffectColor: {r: 0.9716981, g: 0.2878426, b: 0.2878426, a: 1}
+    - _HitEffectColor: {r: 0.9811321, g: 0.2998932, b: 0.2998932, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}
     - _InnerOutlineColor: {r: 1, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
