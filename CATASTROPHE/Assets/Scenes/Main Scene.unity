@@ -6975,7 +6975,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 436895203, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
       propertyPath: maxHealth
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 436895203, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
       propertyPath: hurtSFX.Array.size

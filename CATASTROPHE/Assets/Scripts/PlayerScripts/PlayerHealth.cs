@@ -101,6 +101,7 @@ public class PlayerHealth : MonoBehaviour
     public void death()
     {
         GetComponent<CapsuleCollider2D>().enabled = false;
+        GetComponent<PlayerMovement>().enabled = false;
         //sfx
         AudioManager.instance.PlayerSFXPlayer(randomHurt());
         animator.SetTrigger("death");
