@@ -42,6 +42,7 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator BackgroundTransition()
     {
-
+        //previousLevel.GetComponentInChildren
+        yield return null;
     }
 }
