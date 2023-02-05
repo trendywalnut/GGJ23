@@ -158,9 +158,10 @@ public class RangedAggressiveAI : MonoBehaviour
         {
             Debug.Log("Aggro Shooting");
             Vector3 targetPosition = (target.transform.position - transform.position).normalized;
-            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(targetPosition.x, targetPosition.y, targetPosition.z));
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(targetPosition * bulletForce, ForceMode2D.Impulse);
+            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
+            bullet.GetComponent<Projectile>().SetVelocity(targetPosition);
+            //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            //rb.AddForce(targetPosition * bulletForce, ForceMode2D.Impulse);
             yield return new WaitForSeconds(attackSpeed);
         }
     }

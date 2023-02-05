@@ -7,6 +7,7 @@ public class BossAttackSM : StateMachine
     public static BossAttackSM Instance { get; private set; }
 
     // Add states here
+    [Header("All Attack States")]
     public Idling idleState;
     public AttackingRanged attackingRangedState;
     public AttackingMelee attackingMeleeState;
@@ -18,11 +19,13 @@ public class BossAttackSM : StateMachine
     public List<BaseState> attackStates = new List<BaseState>();
     public BaseState lastAttack;
 
+    [Header("Prefabs & Object References")]
     public GameObject meleeAttack;
     public GameObject bossEnemyManager;
     public GameObject rollingMeleeManager;
     public Transform bossTransform;
 
+    [Header("Timers")]
     public float idleTime;
     public float timeBetweenRangeAttacks;
     public float timeToMeleeAttack;
@@ -66,6 +69,6 @@ public class BossAttackSM : StateMachine
 
     protected override BaseState GetInitialState()
     {
-        return idleState;
+        return spawningEnemiesState;
     }
 }
