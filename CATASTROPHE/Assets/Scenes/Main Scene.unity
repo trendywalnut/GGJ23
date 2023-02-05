@@ -6974,6 +6974,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 436895203, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 436895203, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
       propertyPath: hurtSFX.Array.size
       value: 1
       objectReference: {fileID: 0}

@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private AudioClip[] hurtSFX;
     [SerializeField] private AudioClip deathSFX;
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int maxHealth = 5;
     [SerializeField] private int currentHealth;
     [SerializeField] private float timeForIFrames;
     public bool invulnerable;
