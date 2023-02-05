@@ -127,13 +127,12 @@ MonoBehaviour:
   attackDistance: 10
   attackSpeed: 2
   bulletForce: 5
+  moveRadius: 10
   backAwayDistance: 7
-  patrolPoints:
-  - {fileID: 0}
   vision: 10
   aggroTime: 2
   target: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1726024741078160693, guid: d5163aed4006f4184925a56e33bbd398, type: 3}
 --- !u!114 &7274824282861575031
 MonoBehaviour:
   m_ObjectHideFlags: 0

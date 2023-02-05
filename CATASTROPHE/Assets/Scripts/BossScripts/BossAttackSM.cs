@@ -16,11 +16,14 @@ public class BossAttackSM : StateMachine
 
     public List<BaseState> attackStates = new List<BaseState>();
 
+    public GameObject meleeAttack;
     public Transform bossTransform;
+
     public float idleTime;
     public float timeBetweenRangeAttacks;
     public float timeToMeleeAttack;
-
+    
+    public int meleeDamage;
     public int numberOfBullets;
 
     public bool isHalfHealth;
@@ -56,6 +59,6 @@ public class BossAttackSM : StateMachine
 
     protected override BaseState GetInitialState()
     {
-        return attackingRangedState;
+        return attackingMeleeState;
     }
 }

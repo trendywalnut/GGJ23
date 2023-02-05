@@ -140,8 +140,8 @@ MonoBehaviour:
   attackSpeed: 2
   bulletForce: 2
   backAwayDistance: 7
-  patrolPoints: []
+  moveRadius: 10
   vision: 10
   aggroTime: 2
   target: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1726024741078160693, guid: d5163aed4006f4184925a56e33bbd398, type: 3}

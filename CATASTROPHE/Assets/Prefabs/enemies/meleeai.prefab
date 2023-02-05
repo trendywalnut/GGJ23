@@ -126,10 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   attackPower: 1
-  attackDistance: 2
+  attackDistance: 10
   attackSpeed: 2
-  patrolPoints:
-  - {fileID: 0}
+  moveRadius: 10
   vision: 100
   aggroTime: 4
   target: {fileID: 0}

@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         if(maxHealth <= 0)
         {
             //death noise
+            EnemyManager.Instance.aliveEnemies--;
             Destroy(gameObject);
         }
     }

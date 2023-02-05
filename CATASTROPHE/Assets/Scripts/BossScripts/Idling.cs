@@ -22,7 +22,6 @@ public class Idling : BaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        Debug.Log("Idle Update Logic");
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -30,7 +29,7 @@ public class Idling : BaseState
         else
         {
             int numPossibleStates = sm.attackStates.Count;
-            sm.ChangeState(sm.attackStates[Random.Range(0, numPossibleStates - 1)]);
+            sm.ChangeState(sm.attackStates[Random.Range(0, numPossibleStates)]);
         }
     }
 

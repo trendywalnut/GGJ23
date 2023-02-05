@@ -25,11 +25,14 @@ public class RangedAI : MonoBehaviour
     float bulletForce = 2f;
 
     [SerializeField]
-    float backAwayDistance = 7f;
+    float moveRadius = 4f;
 
     [SerializeField]
-    List<Transform> patrolPoints;
-    private int destPoint = 0;
+    float backAwayDistance = 7f;
+
+    //[SerializeField]
+    //List<Transform> patrolPoints;
+    //private int destPoint = 0;
 
     [SerializeField]
     float vision = 10f;
@@ -56,6 +59,8 @@ public class RangedAI : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.autoBraking = false;
+
+        target = GameObject.FindGameObjectWithTag("Player");
 
         aggroTimeDelta = aggroTime;
         StartCoroutine(StartBehavior());
@@ -94,7 +99,7 @@ public class RangedAI : MonoBehaviour
         else
         {
             // if player is visible
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, vision);
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
             {
                 float distance = Vector3.Distance(transform.position, target.transform.position);
@@ -134,22 +139,45 @@ public class RangedAI : MonoBehaviour
 
         void DoPatrol()
         {
-            if (patrolPoints.Count == 0)
-                return;
+            //if (patrolPoints.Count == 0)
+            //    return;
 
-            agent.destination = patrolPoints[destPoint].position;
-            destPoint = (destPoint + 1) % patrolPoints.Count;
+            //agent.destination = patrolPoints[destPoint].position;
+            //destPoint = (destPoint + 1) % patrolPoints.Count;
+
+            agent.destination = RandomNavmeshLocation(moveRadius);
+
+            if (Vector3.Distance(transform.position, agent.destination) < Mathf.Epsilon)
+            {
+                agent.destination = RandomNavmeshLocation(moveRadius);
+            }
         }
 
         //TODO
         IEnumerator DoAttack()
         {
+            Debug.Log("Shooting");
             Vector3 targetPosition = (target.transform.position - transform.position).normalized;
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(targetPosition.x, targetPosition.y, targetPosition.z));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(targetPosition * bulletForce, ForceMode2D.Impulse);
             yield return new WaitForSeconds(attackSpeed);
         }
+    }
+
+    public Vector3 RandomNavmeshLocation(float radius)
+    {
+        Vector3 randomDirection = Random.insideUnitSphere * radius;
+        randomDirection += transform.position;
+
+        NavMeshHit hit;
+        Vector3 finalPosition = Vector3.zero;
+        if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
+        {
+            finalPosition = hit.position;
+        }
+
+        return finalPosition;
     }
 }
 

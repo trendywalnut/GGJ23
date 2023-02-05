@@ -12,7 +12,7 @@ public class StateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.Enter();
-            Debug.Log(currentState.name + " Enter");
+            //Debug.Log(currentState.name + " Enter");
         }
     }
 
@@ -21,7 +21,7 @@ public class StateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.UpdateLogic();
-            Debug.Log(currentState.name + " Update");
+            //Debug.Log(currentState.name + " Update");
         }
     }
 
@@ -30,13 +30,13 @@ public class StateMachine : MonoBehaviour
         if (currentState != null)
         { 
             currentState.UpdatePhysics();
-            Debug.Log(currentState.name + " LateUpdate");
+            //Debug.Log(currentState.name + " LateUpdate");
         }
     }
 
     public void ChangeState(BaseState newState)
     {
-        Debug.Log("Changing State From: " + currentState.name + " To: " + newState.name);
+        //Debug.Log("Changing State From: " + currentState.name + " To: " + newState.name);
         currentState.Exit();
 
         currentState = newState;
