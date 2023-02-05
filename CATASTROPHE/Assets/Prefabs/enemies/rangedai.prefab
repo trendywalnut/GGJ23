@@ -133,7 +133,7 @@ MonoBehaviour:
   backAwayDistance: 7
   vision: 10
   aggroTime: 2
-  target: {fileID: 0}
+  target: {fileID: 3995980605721639244, guid: 49cb28ebbbf1aa64ba3ea9687dcf736c, type: 3}
   projectile: {fileID: 1726024741078160693, guid: d5163aed4006f4184925a56e33bbd398, type: 3}
 --- !u!114 &7274824282861575031
 MonoBehaviour:
@@ -151,6 +151,8 @@ MonoBehaviour:
   knockbackAmount: 20
   knockbackTime: 0.25
   timeToTweenOnDeath: 0.5
+  healthPickup: {fileID: 3995980605721639244, guid: 49cb28ebbbf1aa64ba3ea9687dcf736c, type: 3}
+  healthSpawnChance: 0.5
 --- !u!61 &42290384593629576
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -128,6 +128,8 @@ MonoBehaviour:
   knockbackAmount: 20
   knockbackTime: 0.25
   timeToTweenOnDeath: 0.5
+  healthPickup: {fileID: 3995980605721639244, guid: 49cb28ebbbf1aa64ba3ea9687dcf736c, type: 3}
+  healthSpawnChance: 0.5
 --- !u!114 &4737138638007258967
 MonoBehaviour:
   m_ObjectHideFlags: 0
