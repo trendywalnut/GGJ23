@@ -3689,6 +3689,22 @@ PrefabInstance:
       propertyPath: waveList.Array.data[2].rangedEnemiesToSpawn
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5973806103722558737, guid: c95ed8be975b72042a80e978e1f34700, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ca55dbc9e566654fb02693cc730dea3, type: 3}
+    - target: {fileID: 5973806103722558738, guid: c95ed8be975b72042a80e978e1f34700, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.92929
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973806103722558738, guid: c95ed8be975b72042a80e978e1f34700, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.92929
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973806103722558738, guid: c95ed8be975b72042a80e978e1f34700, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.5646725
+      objectReference: {fileID: 0}
     - target: {fileID: 5973806104791524107, guid: c95ed8be975b72042a80e978e1f34700, type: 3}
       propertyPath: waitTime
       value: 3.5
