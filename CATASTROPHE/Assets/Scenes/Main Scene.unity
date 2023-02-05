@@ -1326,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1559703041270422822, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1559703041270422823, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: m_RootOrder
@@ -1371,6 +1371,34 @@ PrefabInstance:
     - target: {fileID: 1559703041270422823, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.data[0].meleeEnemiesToSpawn
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.data[1].meleeEnemiesToSpawn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.data[2].meleeEnemiesToSpawn
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.data[0].rangedEnemiesToSpawn
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.data[1].rangedEnemiesToSpawn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: waveList.Array.data[2].rangedEnemiesToSpawn
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
