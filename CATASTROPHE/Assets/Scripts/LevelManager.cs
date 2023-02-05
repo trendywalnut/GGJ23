@@ -10,6 +10,10 @@ public class LevelManager : MonoBehaviour
     [Header("Levels")]
     [SerializeField]
     private GameObject[] levels;
+    private GameObject previousLevel;
+    private GameObject newLevel;
+
+    [SerializeField] private float tweenTime;
 
     
 
@@ -22,10 +26,23 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeLevel(int levelNum)
     {
-        foreach(GameObject i in levels)
+        previousLevel = levelNum > 0 ? levels[levelNum - 1] : levels[0];
+        newLevel = levels[levelNum];
+
+        foreach (GameObject i in levels)
         {
-            i.SetActive(false);
+            if (!(i == previousLevel))
+                i.SetActive(false);
         }
-        levels[levelNum].SetActive(true);
+        //levels[levelNum].SetActive(true);
+
+        // Visual Transition
+        StartCoroutine(BackgroundTransition());
+    }
+
+    IEnumerator BackgroundTransition()
+    {
+        //previousLevel.GetComponentInChildren
+        yield return null;
     }
 }
