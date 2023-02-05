@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
         {
             //TODO damage player
             Destroy(gameObject);
-        } else if (collision.gameObject)
+        } else if (!collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }

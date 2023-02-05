@@ -78,7 +78,7 @@ public class RangedAI : MonoBehaviour
     {
 
         // if is already aggroed
-        if (aggroTimeDelta > 0f)
+        if (true || aggroTimeDelta > 0f)
         {
             aggroTimeDelta -= Time.deltaTime;
             float distance = Vector3.Distance(transform.position, target.transform.position);
@@ -99,10 +99,11 @@ public class RangedAI : MonoBehaviour
         else
         {
             // if player is visible
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, vision);
-            if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
+            float distance = Vector3.Distance(transform.position, target.transform.position);
+
+            if (distance < vision)
             {
-                float distance = Vector3.Distance(transform.position, target.transform.position);
+                aggroTimeDelta = aggroTime;
                 if(distance <= backAwayDistance)
                 {
                     BackAway();
@@ -114,7 +115,6 @@ public class RangedAI : MonoBehaviour
                 else
                 {
                     Follow();
-                    aggroTimeDelta = aggroTime; //reset aggro
                 }
             }
             else
