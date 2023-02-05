@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemyHealth : MonoBehaviour, IDamageable
 {
     [SerializeField][Range(1,3)] private int maxHealth;
+    [SerializeField] private float knockbackAmount;
+    [SerializeField] private float knockbackTime;
+
+    [SerializeField] private float timeToTweenOnDeath;
+
     private Material enemyMat;
+    private Rigidbody2D rb;
 
     private void Start()
     {
         enemyMat = GetComponent<Renderer>().material;
+        rb = GetComponent<Rigidbody2D>();
     }
     public void TakeDamage(int damage)
     {
         StartCoroutine(HitEffect());
+        StartCoroutine(KnockBack());
         //Debug.Log("take damage");
         //hit effect
         //hit noise
@@ -22,8 +31,32 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         {
             //death noise
             EnemyManager.Instance.aliveEnemies--;
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            StartCoroutine(EnemyDeathTween());
         }
+    }
+
+    IEnumerator KnockBack()
+    {
+        Transform playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = (transform.position - playerPos.position).normalized * knockbackAmount;
+        yield return new WaitForSeconds(knockbackTime);
+        GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = Vector3.zero;
+    }
+
+    IEnumerator EnemyDeathTween()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), timeToTweenOnDeath);
+        transform.DORotate(new Vector3(0, 0, 90), timeToTweenOnDeath);
+        GetComponent<SpriteRenderer>().DOFade(0, timeToTweenOnDeath);
+        //Transform playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        //GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = (transform.position - playerPos.position).normalized * knockbackAmount;
+
+        yield return new WaitForSeconds(timeToTweenOnDeath);
+
+        Destroy(this.gameObject);
     }
 
     IEnumerator HitEffect()

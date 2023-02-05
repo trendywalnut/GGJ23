@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7795550996373759097}
   - component: {fileID: 7274824282861575031}
   - component: {fileID: 42290384593629576}
+  - component: {fileID: -1866393451258639294}
   m_Layer: 0
   m_Name: rangedai
   m_TagString: Enemy
@@ -146,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  knockbackAmount: 20
+  knockbackTime: 0.25
+  timeToTweenOnDeath: 0.5
 --- !u!61 &42290384593629576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,3 +176,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1866393451258639294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795550996373759092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617cb687ddbd91e4390bc4a96f472d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isDashing = true;
             StartCoroutine(DashAttackTime());
-            Debug.Log("Dashed");
+            //Debug.Log("Dashed");
             playerPosition = new Vector2(transform.position.x, transform.position.y);
             dashDirection = mousePosition - playerPosition;
 

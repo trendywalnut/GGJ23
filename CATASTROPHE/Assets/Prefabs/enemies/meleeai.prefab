@@ -145,6 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  knockbackAmount: 20
+  knockbackTime: 0.25
+  timeToTweenOnDeath: 0.5
 --- !u!61 &6697032800660302369
 BoxCollider2D:
   m_ObjectHideFlags: 0
