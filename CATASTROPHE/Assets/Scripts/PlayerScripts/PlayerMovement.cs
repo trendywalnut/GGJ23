@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = playerInput.playerMap.Movement.ReadValue<Vector2>(); // Reads Vector2 from WASD or Left Stick
         if (moveInput != Vector2.zero)
-            Debug.Log("Move Input: " + moveInput);
+            //Debug.Log("Move Input: " + moveInput);
         mousePosition = mainCam.ScreenToWorldPoint(playerInput.playerMap.Mouse.ReadValue<Vector2>());
         rb.velocity = moveInput.normalized * moveSpeed;
 
@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isCooldownDone)
         {
+            isDashing = true;
             StartCoroutine(DashAttackTime());
             Debug.Log("Dashed");
             playerPosition = new Vector2(transform.position.x, transform.position.y);
@@ -78,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator DashAttackTime()
     {
-        isDashing = true;
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
     }

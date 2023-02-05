@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("take damage");
         //hit effect
         //hit noise
         maxHealth -= damage;

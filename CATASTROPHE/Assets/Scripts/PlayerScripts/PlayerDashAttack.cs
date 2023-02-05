@@ -11,13 +11,13 @@ public class PlayerDashAttack : MonoBehaviour
     private PlayerMovement _playerMovement;
     void Start()
     {
-        _playerMovement = GetComponent<PlayerMovement>();
+        _playerMovement = GetComponentInParent<PlayerMovement>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Attack");
-        if (CompareTag("Enemy"))
+        Debug.Log("collision");
+        if (other.CompareTag("Enemy") && _playerMovement.isDashing)
         {
             Debug.Log("HIT!!!!!");
             enemy = other.GetComponent<IDamageable>();
