@@ -34,8 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        playerMat.EnableKeyword("HITEFFECT_ON");
-        playerMat.DisableKeyword("HITEFFECT_ON");
+        StartCoroutine(HitEffect());
         PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
         if (currentHealth - damageAmount <= 0)
         {
@@ -45,6 +44,13 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damageAmount;
         }
+    }
+
+    IEnumerator HitEffect()
+    {
+        playerMat.EnableKeyword("HITEFFECT_ON");
+        yield return new WaitForSeconds(0.2f);
+        playerMat.DisableKeyword("HITEFFECT_ON");
     }
 
     //Debug Testing
