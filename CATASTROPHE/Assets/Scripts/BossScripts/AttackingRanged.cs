@@ -21,7 +21,7 @@ public class AttackingRanged : BaseState
     {
         base.Enter();
 
-        Debug.Log("ENTERING RANGE ATTACK");
+        //Debug.Log("ENTERING RANGE ATTACK");
 
         currentAttack = 0;
         numAttacks = 2;
@@ -33,7 +33,6 @@ public class AttackingRanged : BaseState
         }
 
         canShoot = true;
-        Debug.Log(canShoot);
     }
 
     public override void UpdateLogic()

@@ -10,6 +10,7 @@ public class BossAttackSM : StateMachine
     public Idling idleState;
     public AttackingRanged attackingRangedState;
     public AttackingMelee attackingMeleeState;
+    public RollingMelee rollingMeleeState;
     public SpawningEnemies spawningEnemiesState;
     public SpawningPopups spawningPopupsState;
     public Blocking blockingState;
@@ -19,11 +20,13 @@ public class BossAttackSM : StateMachine
 
     public GameObject meleeAttack;
     public GameObject bossEnemyManager;
+    public GameObject rollingMeleeManager;
     public Transform bossTransform;
 
     public float idleTime;
     public float timeBetweenRangeAttacks;
     public float timeToMeleeAttack;
+    public float timeBetweenRollingMelees;
     
     public int meleeDamage;
     public int numberOfBullets;
@@ -38,6 +41,7 @@ public class BossAttackSM : StateMachine
         idleState = new Idling(this);
         attackingRangedState = new AttackingRanged(this);
         attackingMeleeState = new AttackingMelee(this);
+        rollingMeleeState = new RollingMelee(this);
         spawningEnemiesState = new SpawningEnemies(this);
         spawningPopupsState = new SpawningPopups(this);
         blockingState = new Blocking(this);
@@ -45,6 +49,7 @@ public class BossAttackSM : StateMachine
         //Add all attack states to attackStates list
         attackStates.Add(attackingRangedState);
         attackStates.Add(attackingMeleeState);
+        attackStates.Add(rollingMeleeState);
         attackStates.Add(spawningEnemiesState);
         attackStates.Add(spawningPopupsState);
     }

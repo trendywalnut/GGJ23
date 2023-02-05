@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class AttackingMelee : BaseState
+public class RollingMelee : BaseState
 {
     private BossAttackSM sm;
 
-    public AttackingMelee(BossAttackSM stateMachine) : base("AttackingMelee", stateMachine) 
+    public RollingMelee (BossAttackSM stateMachine) : base("RollingMelee", stateMachine)
     {
         sm = stateMachine;
     }
@@ -16,15 +15,14 @@ public class AttackingMelee : BaseState
     {
         base.Enter();
 
-        sm.meleeAttack.SetActive(true);
-        sm.meleeAttack.GetComponent<MeleeAttack>().Expand();
+        sm.rollingMeleeManager.SetActive(true);
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
 
-        if (sm.meleeAttack.GetComponent<MeleeAttack>().doneAttacking)
+        if (sm.rollingMeleeManager.GetComponent<RollingMeleeManager>().finishedAllAttacks)
         {
             stateMachine.ChangeState(sm.idleState);
         }
@@ -39,7 +37,7 @@ public class AttackingMelee : BaseState
     {
         base.Exit();
 
-        //sm.meleeAttack.SetActive(false);
+        sm.rollingMeleeManager.GetComponent<RollingMeleeManager>().finishedAllAttacks = false;
+        sm.rollingMeleeManager.SetActive(false);
     }
-
 }

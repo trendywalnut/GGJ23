@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("Enemy Manager Enabled");
+        //Debug.Log("Enemy Manager Enabled");
         Instance = this;
         waveNumber = 0;
         allWavesFinished = false;
@@ -37,13 +37,13 @@ public class EnemyManager : MonoBehaviour
     {
         if (aliveEnemies == 0)
         {
-            Debug.Log("Enemy Wave Defeated");
+            //Debug.Log("Enemy Wave Defeated");
             timer += Time.deltaTime;
             if (waveNumber == waveList.Count - 1)
             {
                 // Move on to next area
                 allWavesFinished = true;
-                Debug.Log("Move Onto Next Area");
+                //Debug.Log("Move Onto Next Area");
             }
             else if (timer >= timeBetweenWaves)
             {

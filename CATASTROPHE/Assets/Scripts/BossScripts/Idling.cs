@@ -38,7 +38,7 @@ public class Idling : BaseState
                         otherAttacks.Add(attack);
                 }
                 int numPossibleStates = otherAttacks.Count;
-                chosenAttack = otherAttacks[Random.Range(0, otherAttacks.Count)];
+                chosenAttack = otherAttacks[Random.Range(0, numPossibleStates)];
             }
             else
             {
