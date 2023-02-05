@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
             // Animation Stuff
             animator.SetBool("isDash", true);
-            AudioManager.instance.PlayerSFXPlayer(randomMeow());
+            AudioManager.instance.DashSFXPlayer(randomMeow());
         }
     }
 
