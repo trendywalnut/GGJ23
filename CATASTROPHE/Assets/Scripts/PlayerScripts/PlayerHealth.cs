@@ -8,7 +8,9 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
+    [SerializeField] private float timeForIFrames;
     public bool invulnerable;
+    public bool inIFrames;
 
     private Material playerMat;
 
@@ -36,23 +38,31 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        if (!invulnerable)
+        if (!invulnerable && !inIFrames)
         {
+            inIFrames = true;
             StartCoroutine(HitEffect());
             StartCoroutine(HitAnimation());
+            StartCoroutine(IFrames());
             PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
             //VFX
             Instantiate(Resources.Load("VFX_Damage_Player"), transform.position, transform.rotation);
             //reduce health
             if (currentHealth - damageAmount <= 0)
             {
-                //Lose state
+                // Lose state
             }
             else
             {
                 currentHealth -= damageAmount;
             }
         }        
+    }
+
+    IEnumerator IFrames()
+    {
+        yield return new WaitForSeconds(timeForIFrames);
+        inIFrames = false;
     }
 
     IEnumerator HitEffect()
