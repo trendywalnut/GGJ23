@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 1
+  healthPickupSFX: {fileID: 8300000, guid: 6502a631a4efe4c49b9a0e4df2c185ce, type: 3}
