@@ -19,6 +19,8 @@ public class BossAttackSM : StateMachine
     public float idleTime;
     public float timeBetweenRangeAttacks;
 
+    public int numberOfBullets;
+
     public bool isHalfHealth;
 
     private void Awake()
@@ -38,8 +40,10 @@ public class BossAttackSM : StateMachine
         attackStates.Add(spawningPopupsState);
     }
 
-    private void Update()
+    public override void Update()
     {
+        base.Update();
+
         if ((BossHealth.Instance.currentHealth / BossHealth.Instance.maxHealth) <= 0.5f)
         {
             isHalfHealth = true;

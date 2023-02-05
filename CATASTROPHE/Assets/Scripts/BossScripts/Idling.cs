@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Idling : BaseState
 {
     private BossAttackSM sm;
@@ -21,7 +22,8 @@ public class Idling : BaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        if (timer >= 0)
+        Debug.Log("Idle Update Logic");
+        if (timer > 0)
         {
             timer -= Time.deltaTime;
         }
@@ -35,6 +37,7 @@ public class Idling : BaseState
     public override void UpdatePhysics()
     {
         base.UpdatePhysics();
+        //Debug.Log(timer);
     }
 
     public override void Exit()
