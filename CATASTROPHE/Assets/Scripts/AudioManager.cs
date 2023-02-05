@@ -16,11 +16,18 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public AudioSource gameSFX;
+    public AudioSource playerSFX;
+    public AudioSource enemySFX;
 
-    public void SFXPlayer (AudioClip SFX)
+    public void PlayerSFXPlayer (AudioClip SFX)
     {
-        gameSFX.clip = SFX;
-        gameSFX.Play();
+        playerSFX.clip = SFX;
+        playerSFX.Play();
+    }
+
+    public void EnemySFXPlayer (AudioClip SFX)
+    {
+        enemySFX.clip = SFX;
+        enemySFX.Play();
     }
 }
