@@ -9,6 +9,11 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileSpeed;
     [SerializeField] private Vector2 targetDir;
 
+
+    private void Start()
+    {
+        StartCoroutine(Destroy());
+    }
     public void SetVelocity(Vector2 targetDirection)
     {
         targetDir = targetDirection;

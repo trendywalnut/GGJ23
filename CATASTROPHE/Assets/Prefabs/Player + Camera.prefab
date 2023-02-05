@@ -341,7 +341,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42a8417df558bd54ba87d7155c0dc0a2, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 12
   dashSpeed: 75
-  dashTime: 0.08
+  dashTime: 0.12
   dashCooldown: 0.3
   mainCam: {fileID: 7311764271837923168}
   isDashing: 0
@@ -456,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  invulnerable: 0
 --- !u!70 &7778104590455929228
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
