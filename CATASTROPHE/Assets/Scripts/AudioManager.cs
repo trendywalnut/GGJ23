@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource playerSFX;
     public AudioSource enemySFX;
+    public AudioSource dashSFX;
 
     public void PlayerSFXPlayer (AudioClip SFX)
     {
@@ -23,5 +24,11 @@ public class AudioManager : MonoBehaviour
     {
         enemySFX.clip = SFX;
         enemySFX.Play();
+    }
+
+    public void DashSFXPlayer (AudioClip SFX)
+    {
+        dashSFX.clip = SFX;
+        dashSFX.Play();
     }
 }
