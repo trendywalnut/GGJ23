@@ -127,7 +127,7 @@ MonoBehaviour:
   attackDistance: 10
   attackSpeed: 2
   bulletForce: 5
-  moveRadius: 10
+  moveRadius: 150
   backAwayDistance: 7
   vision: 10
   aggroTime: 2

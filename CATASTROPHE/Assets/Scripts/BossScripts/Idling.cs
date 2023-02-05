@@ -7,6 +7,7 @@ public class Idling : BaseState
 {
     private BossAttackSM sm;
     private float timer;
+    private BaseState chosenAttack;
 
     public Idling(BossAttackSM stateMachine) : base("Idling", stateMachine) 
     {
@@ -28,8 +29,23 @@ public class Idling : BaseState
         }
         else
         {
-            int numPossibleStates = sm.attackStates.Count;
-            sm.ChangeState(sm.attackStates[Random.Range(0, numPossibleStates + 1)]);
+            if (sm.lastAttack != null)
+            {
+                List<BaseState> otherAttacks = new List<BaseState>();
+                foreach(var attack in sm.attackStates)
+                {
+                    if (attack != sm.lastAttack)
+                        otherAttacks.Add(attack);
+                }
+                int numPossibleStates = otherAttacks.Count;
+                chosenAttack = otherAttacks[Random.Range(0, otherAttacks.Count)];
+            }
+            else
+            {
+                int numPossibleStates = sm.attackStates.Count;
+                chosenAttack = sm.attackStates[Random.Range(0, numPossibleStates)];
+            }
+            sm.ChangeState(chosenAttack);
         }
     }
 
@@ -42,6 +58,8 @@ public class Idling : BaseState
     public override void Exit()
     {
         base.Exit();
+
+        sm.lastAttack = chosenAttack;
     }
 
 }

@@ -128,7 +128,7 @@ MonoBehaviour:
   attackPower: 1
   attackDistance: 10
   attackSpeed: 2
-  moveRadius: 10
+  moveRadius: 150
   vision: 100
   aggroTime: 4
   target: {fileID: 0}

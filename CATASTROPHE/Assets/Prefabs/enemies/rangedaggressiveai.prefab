@@ -141,7 +141,7 @@ MonoBehaviour:
   attackSpeed: 2
   bulletForce: 2
   backAwayDistance: 7
-  moveRadius: 10
+  moveRadius: 150
   vision: 10
   aggroTime: 2
   target: {fileID: 0}

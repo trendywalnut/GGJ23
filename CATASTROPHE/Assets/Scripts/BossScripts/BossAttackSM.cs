@@ -15,6 +15,7 @@ public class BossAttackSM : StateMachine
     public Blocking blockingState;
 
     public List<BaseState> attackStates = new List<BaseState>();
+    public BaseState lastAttack;
 
     public GameObject meleeAttack;
     public GameObject bossEnemyManager;
@@ -60,6 +61,6 @@ public class BossAttackSM : StateMachine
 
     protected override BaseState GetInitialState()
     {
-        return spawningEnemiesState;
+        return idleState;
     }
 }
