@@ -102,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
             // Animation Stuff
             animator.SetBool("isDashing", true);
             float angle = Mathf.Atan2(dashDirection.y, dashDirection.x) * Mathf.Rad2Deg;
-            Debug.Log(angle);
             if (angle < -90 || angle > 90) { spriteRenderer.flipY = true; }
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
@@ -114,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
 
         // Animation Stuff
-        animator.SetBool("isDashing", false);
+        animator.SetBool("isDash", false);
         transform.rotation = Quaternion.identity;
         spriteRenderer.flipY = false;
     }
