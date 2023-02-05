@@ -132,6 +132,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        if (spriteRenderer.flipX == true)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
+        
     }
 
     public void resetRotate()
@@ -145,5 +151,9 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(.05f);
         transform.rotation = Quaternion.identity;
         spriteRenderer.flipY = false;
+        if (transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
     }
 }
