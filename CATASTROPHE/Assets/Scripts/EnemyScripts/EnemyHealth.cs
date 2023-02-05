@@ -14,6 +14,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     private Material enemyMat;
     private Rigidbody2D rb;
 
+    [SerializeField] private GameObject healthPickup;
+    [SerializeField] private float healthSpawnChance = .5f;
+
     private void Start()
     {
         enemyMat = GetComponent<Renderer>().material;
@@ -30,9 +33,15 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         if(maxHealth <= 0)
         {
             //death noise
-            EnemyManager.Instance.aliveEnemies--;
+            //EnemyManager.Instance.aliveEnemies--;
             //Destroy(gameObject);
             StartCoroutine(EnemyDeathTween());
+
+            //Spawn healthpickup
+            if (Random.Range(0, 1) < healthSpawnChance)
+            {
+                StartCoroutine(SpawnHealthPickup());
+            }
         }
     }
 
@@ -51,6 +60,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), timeToTweenOnDeath);
         transform.DORotate(new Vector3(0, 0, 180), timeToTweenOnDeath);
         GetComponent<SpriteRenderer>().DOFade(0, timeToTweenOnDeath);
+
         //Transform playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         //GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = (transform.position - playerPos.position).normalized * knockbackAmount;
 
@@ -64,5 +74,12 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         enemyMat.EnableKeyword("HITEFFECT_ON");
         yield return new WaitForSeconds(0.2f);
         enemyMat.DisableKeyword("HITEFFECT_ON");
+    }
+
+    IEnumerator SpawnHealthPickup()
+    {
+        yield return new WaitForSeconds(timeToTweenOnDeath - .2f);
+        Instantiate(healthPickup, this.gameObject.transform.position, Quaternion.identity);
+        Debug.Log("Health Spawned");
     }
 }
