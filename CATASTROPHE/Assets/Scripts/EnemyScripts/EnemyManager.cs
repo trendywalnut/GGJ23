@@ -17,6 +17,7 @@ public class EnemyManager : MonoBehaviour
     public bool allWavesFinished;
 
     [SerializeField] private float timeBetweenWaves;
+    [SerializeField] private int levelToLoad;
 
     private float timer;
 
@@ -43,6 +44,7 @@ public class EnemyManager : MonoBehaviour
             {
                 // Move on to next area
                 allWavesFinished = true;
+                LevelManager.instance.ChangeLevel(levelToLoad);
                 //Debug.Log("Move Onto Next Area");
             }
             else if (timer >= timeBetweenWaves)
