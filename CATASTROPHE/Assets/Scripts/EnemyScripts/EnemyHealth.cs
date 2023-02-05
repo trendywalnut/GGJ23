@@ -49,7 +49,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         GetComponent<BoxCollider2D>().enabled = false;
 
         transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), timeToTweenOnDeath);
-        transform.DORotate(new Vector3(0, 0, 90), timeToTweenOnDeath);
+        transform.DORotate(new Vector3(0, 0, 180), timeToTweenOnDeath);
         GetComponent<SpriteRenderer>().DOFade(0, timeToTweenOnDeath);
         //Transform playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         //GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = (transform.position - playerPos.position).normalized * knockbackAmount;

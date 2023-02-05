@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 
 public class MeleeAI : MonoBehaviour
 {
 
     //[SerializeField]
     //float moveSpeed;
+
+    [SerializeField]
+    float attackPunchIntensity;
+
+    [SerializeField]
+    float attackPunchTime;
+
+    bool isAttacking;
+    bool hitPlayerDuringAttack;
 
     [SerializeField]
     float health = 10f;
@@ -133,7 +143,30 @@ public class MeleeAI : MonoBehaviour
         //TODO
         IEnumerator DoAttack()
         {
-            yield return new WaitForSeconds(attackSpeed);
+            isAttacking = true;
+            transform.DOPunchPosition((target.transform.position - transform.position) * attackPunchIntensity, attackPunchTime, 1);
+
+            yield return new WaitForSeconds(attackPunchTime);
+            isAttacking = false;
+            if (hitPlayerDuringAttack)
+            {
+                PlayerHealth.Instance.TakeDamage((int)attackPower);
+                hitPlayerDuringAttack = false;
+            }
+
+            yield return new WaitForSeconds(attackSpeed - attackPunchTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isAttacking)
+        {
+            if (collision.tag == "Player" && !target.GetComponent<PlayerMovement>().isDashing)
+            {
+                Debug.Log("Hit Player - Melee Enemy");
+                hitPlayerDuringAttack = true;
+            }
         }
     }
 
