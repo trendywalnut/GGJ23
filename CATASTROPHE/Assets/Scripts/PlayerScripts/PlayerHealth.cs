@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth Instance { get; private set; }
 
+    [SerializeField] private AudioClip[] hurtSFX;
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
     [SerializeField] private float timeForIFrames;
@@ -47,6 +48,8 @@ public class PlayerHealth : MonoBehaviour
             PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
             //VFX
             Instantiate(Resources.Load("VFX_Damage_Player"), transform.position, transform.rotation);
+            //sfx
+            AudioManager.instance.PlayerSFXPlayer(randomHurt());
             //reduce health
             if (currentHealth - damageAmount <= 0)
             {
@@ -57,6 +60,11 @@ public class PlayerHealth : MonoBehaviour
                 currentHealth -= damageAmount;
             }
         }        
+    }
+    private AudioClip randomHurt()
+    {
+        int i = Random.Range(0, hurtSFX.Length);
+        return hurtSFX[i];
     }
 
     IEnumerator IFrames()

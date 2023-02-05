@@ -458,6 +458,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df4cefe3c99ec845a386144d648f77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtSFX:
+  - {fileID: 8300000, guid: ddab3c4434f3f4192be5c742c07aa062, type: 3}
+  - {fileID: 8300000, guid: 729ea54d8c9064013b3063d0799960c0, type: 3}
+  - {fileID: 8300000, guid: bd117e140f6584b3187744e0f84bb280, type: 3}
+  - {fileID: 8300000, guid: 57d16083f90d3444abe12cb108cd8ea6, type: 3}
   maxHealth: 10
   currentHealth: 0
   timeForIFrames: 0.8
