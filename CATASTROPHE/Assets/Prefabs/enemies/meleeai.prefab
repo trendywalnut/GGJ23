@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8056866608878830382}
   - component: {fileID: 6697032800660302369}
   - component: {fileID: 7523901744615456592}
-  - component: {fileID: 703769080}
+  - component: {fileID: 6557011180868942902}
   m_Layer: 0
   m_Name: meleeai
   m_TagString: Enemy
@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 6e3dde60f456ef246b6e66572c2d8bd4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617cb687ddbd91e4390bc4a96f472d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &703769080
+--- !u!114 &6557011180868942902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
