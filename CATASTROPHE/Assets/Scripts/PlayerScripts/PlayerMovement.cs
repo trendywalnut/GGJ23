@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             cooldownTimer = dashCooldown;
 
             // Animation Stuff
-            animator.SetBool("isDashing", true);
+            animator.SetBool("isDash", true);
             float angle = Mathf.Atan2(dashDirection.y, dashDirection.x) * Mathf.Rad2Deg;
             if (angle < -90 || angle > 90) { spriteRenderer.flipY = true; }
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
