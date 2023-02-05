@@ -9,8 +9,12 @@ public class EnemyManager : MonoBehaviour
     public List<EnemyWave> waveList = new List<EnemyWave>();
     public GameObject enemySpawner;
 
+    private EnemyWave currentWave;
+
     public int aliveEnemies;
     public int waveNumber;
+
+    public bool allWavesFinished;
 
     [SerializeField] private float timeBetweenWaves;
 
@@ -21,8 +25,12 @@ public class EnemyManager : MonoBehaviour
         Debug.Log("Enemy Manager Enabled");
         Instance = this;
         waveNumber = 0;
-        aliveEnemies = waveList[waveNumber].totalEnemies;
-        enemySpawner.GetComponent<EnemySpawner>().SpawnEnemies(waveList[waveNumber]);
+        allWavesFinished = false;
+
+        currentWave = waveList[waveNumber];
+        currentWave.totalEnemies = currentWave.meleeEnemiesToSpawn + currentWave.rangedEnemiesToSpawn;
+        aliveEnemies = currentWave.totalEnemies;
+        enemySpawner.GetComponent<EnemySpawner>().SpawnEnemies(currentWave);
     }
 
     private void Update()
@@ -31,21 +39,22 @@ public class EnemyManager : MonoBehaviour
         {
             Debug.Log("Enemy Wave Defeated");
             timer += Time.deltaTime;
-            if (timer >= timeBetweenWaves)
+            if (waveNumber == waveList.Count - 1)
+            {
+                // Move on to next area
+                allWavesFinished = true;
+                Debug.Log("Move Onto Next Area");
+            }
+            else if (timer >= timeBetweenWaves)
             {
                 aliveEnemies = -1;
                 timer = 0;
 
-                if (waveNumber == waveList.Count)
-                {
-                    // Move on to next area
-                }
-                else
-                {
-                    waveNumber++;
-                    enemySpawner.GetComponent<EnemySpawner>().SpawnEnemies(waveList[waveNumber]);
-                    aliveEnemies = waveList[waveNumber].totalEnemies;
-                }
+                waveNumber++;
+                currentWave = waveList[waveNumber];
+                enemySpawner.GetComponent<EnemySpawner>().SpawnEnemies(currentWave);
+                currentWave.totalEnemies = currentWave.meleeEnemiesToSpawn + currentWave.rangedEnemiesToSpawn;
+                aliveEnemies = currentWave.totalEnemies;
             }
         }
     }

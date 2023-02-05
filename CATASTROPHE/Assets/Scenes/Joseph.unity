@@ -686,6 +686,7 @@ Transform:
   - {fileID: 1496448651}
   - {fileID: 221125770}
   - {fileID: 2084187846}
+  - {fileID: 1558494048}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1033,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &994881037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,9 +1050,11 @@ MonoBehaviour:
   waveList:
   - meleeEnemiesToSpawn: 10
     rangedEnemiesToSpawn: 5
-    totalEnemies: 15
+    totalEnemies: 0
+  - meleeEnemiesToSpawn: 10
+    rangedEnemiesToSpawn: 5
+    totalEnemies: 0
   enemySpawner: {fileID: 570701791}
-  isStartingEnabled: 1
   aliveEnemies: 0
   waveNumber: 0
   timeBetweenWaves: 5
@@ -1397,6 +1400,58 @@ Transform:
   m_Father: {fileID: 242238841}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1558494047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558494048}
+  - component: {fileID: 1558494049}
+  m_Layer: 0
+  m_Name: BossEnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1558494048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558494047}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.65110064, y: 0.19686061, z: 0.19969936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 493385282}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558494049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558494047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ac19a9e8393e84e983e071e9cfd28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveList:
+  - meleeEnemiesToSpawn: 4
+    rangedEnemiesToSpawn: 6
+    totalEnemies: 0
+  enemySpawner: {fileID: 570701791}
+  aliveEnemies: 0
+  waveNumber: 0
+  timeBetweenWaves: 0
 --- !u!1 &1589144096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,6 +2035,7 @@ MonoBehaviour:
   blockingState:
     name: 
   meleeAttack: {fileID: 2084187844}
+  bossEnemyManager: {fileID: 1558494047}
   bossTransform: {fileID: 2103385633}
   idleTime: 2.5
   timeBetweenRangeAttacks: 0.7

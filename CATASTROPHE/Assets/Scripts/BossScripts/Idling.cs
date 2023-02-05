@@ -29,7 +29,7 @@ public class Idling : BaseState
         else
         {
             int numPossibleStates = sm.attackStates.Count;
-            sm.ChangeState(sm.attackStates[Random.Range(0, numPossibleStates)]);
+            sm.ChangeState(sm.attackStates[Random.Range(0, numPossibleStates + 1)]);
         }
     }
 

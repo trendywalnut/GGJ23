@@ -17,6 +17,7 @@ public class BossAttackSM : StateMachine
     public List<BaseState> attackStates = new List<BaseState>();
 
     public GameObject meleeAttack;
+    public GameObject bossEnemyManager;
     public Transform bossTransform;
 
     public float idleTime;
@@ -59,6 +60,6 @@ public class BossAttackSM : StateMachine
 
     protected override BaseState GetInitialState()
     {
-        return attackingMeleeState;
+        return spawningEnemiesState;
     }
 }

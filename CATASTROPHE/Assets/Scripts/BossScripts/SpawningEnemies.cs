@@ -14,12 +14,18 @@ public class SpawningEnemies : BaseState
     public override void Enter()
     {
         base.Enter();
+
+        sm.bossEnemyManager.SetActive(true);
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        stateMachine.ChangeState(sm.idleState);
+
+        if (sm.bossEnemyManager.GetComponent<EnemyManager>().allWavesFinished)
+        {
+            stateMachine.ChangeState(sm.idleState);
+        }
     }
 
     public override void UpdatePhysics()

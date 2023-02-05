@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instance { get; private set; }
+
     [SerializeField] private GameObject meleeEnemy;
     [SerializeField] private GameObject rangedEnemy;
     [SerializeField] private GameObject rangedAggroEnemy;
 
     [SerializeField] private List<Transform> enemySpawners = new List<Transform>();
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void SpawnEnemies(EnemyWave waveToSpawn)
     {
