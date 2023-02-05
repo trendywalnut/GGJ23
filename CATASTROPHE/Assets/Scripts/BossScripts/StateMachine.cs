@@ -10,23 +10,33 @@ public class StateMachine : MonoBehaviour
     {
         currentState = GetInitialState();
         if (currentState != null)
+        {
             currentState.Enter();
+            Debug.Log(currentState.name + " Enter");
+        }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (currentState != null)
+        {
             currentState.UpdateLogic();
+            Debug.Log(currentState.name + " Update");
+        }
     }
 
     private void LateUpdate()
     {
         if (currentState != null)
+        { 
             currentState.UpdatePhysics();
+            Debug.Log(currentState.name + " LateUpdate");
+        }
     }
 
     public void ChangeState(BaseState newState)
     {
+        Debug.Log("Changing State From: " + currentState.name + " To: " + newState.name);
         currentState.Exit();
 
         currentState = newState;

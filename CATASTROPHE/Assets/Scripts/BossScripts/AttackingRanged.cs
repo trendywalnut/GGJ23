@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class AttackingRanged : BaseState
 {
     private BossAttackSM sm;
@@ -39,12 +40,6 @@ public class AttackingRanged : BaseState
     {
         base.UpdateLogic();
 
-    }
-
-    public override void UpdatePhysics()
-    {
-        base.UpdatePhysics();
-
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -58,25 +53,26 @@ public class AttackingRanged : BaseState
             }
             else
             {
-                Debug.Log("Changing to Idle");
-                sm.ChangeState(sm.idleState);
+                stateMachine.ChangeState(sm.idleState);
             }
         }
 
         if (canShoot)
         {
-            Debug.Log("Trigger Attack");
             RangedAttack();
             currentAttack++;
             canShoot = false;
         }
     }
 
+    public override void UpdatePhysics()
+    {
+        base.UpdatePhysics();
+    }
+
     private void RangedAttack()
     {
-        Debug.Log("Bullets!");
-
-        int bullletAmount = BulletPool.SharedInstance.amountToPool / 2;
+        int bullletAmount = sm.numberOfBullets;
         float startAngle = 90f, endAngle = 270f;
 
         float angleStep = (endAngle - startAngle) / bullletAmount;

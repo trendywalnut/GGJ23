@@ -9,6 +9,8 @@ public class BulletPool : MonoBehaviour
     public GameObject objectToPool;
     public int amountToPool;
 
+    private bool notEnoughBulletsInPool = true;
+
     private void Awake()
     {
         SharedInstance = this;
@@ -33,6 +35,15 @@ public class BulletPool : MonoBehaviour
             if (!pooledObjects[i].activeInHierarchy)
                 return pooledObjects[i];
         }
+
+        if (notEnoughBulletsInPool)
+        {
+            GameObject bullet = Instantiate(objectToPool);
+            bullet.SetActive(false);
+            pooledObjects.Add(bullet);
+            return bullet;
+        }
+
         return null;
     }
 }

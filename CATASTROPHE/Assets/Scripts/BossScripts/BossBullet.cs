@@ -40,6 +40,7 @@ public class BossBullet : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerHealth.Instance.TakeDamage(bulletDamage);
+            Destroy();
         }
     }
 }

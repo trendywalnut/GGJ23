@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class AttackingMelee : BaseState
 {
     private BossAttackSM sm;
@@ -18,6 +19,7 @@ public class AttackingMelee : BaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
+        stateMachine.ChangeState(sm.idleState);
     }
 
     public override void UpdatePhysics()
