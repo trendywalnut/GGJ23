@@ -957,6 +957,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.27
       objectReference: {fileID: 0}
@@ -1000,10 +1008,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a61aca07261338e49868a2d8226c0b83, type: 3}
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695923648983940 stripped
@@ -1021,6 +1037,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1066,6 +1090,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: virtual_pets.zip
@@ -1073,7 +1105,7 @@ PrefabInstance:
     - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0542b3dbd3a35f469088cb676d2cc34, type: 3}
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695923444027472 stripped
@@ -1091,6 +1123,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1136,10 +1176,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Important Docs
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695923442295773 stripped
@@ -1241,6 +1293,14 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.78
       objectReference: {fileID: 0}
@@ -1284,10 +1344,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Movies
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695923459488965 stripped
@@ -1389,6 +1461,14 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.4
       objectReference: {fileID: 0}
@@ -1432,10 +1512,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: memes xD
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695923497553091 stripped
@@ -1453,6 +1545,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1498,10 +1598,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Documents
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695923319389174 stripped
@@ -1989,6 +2101,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.96
       objectReference: {fileID: 0}
@@ -2032,10 +2152,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: minecraft mods
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922778154722 stripped
@@ -2053,6 +2185,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2098,6 +2238,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: secret (NO PARENTS!)
@@ -2105,7 +2253,7 @@ PrefabInstance:
     - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0542b3dbd3a35f469088cb676d2cc34, type: 3}
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922858340561 stripped
@@ -2123,6 +2271,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2168,12 +2324,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: 'GGJ23
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922497338358 stripped
@@ -2191,6 +2359,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2236,10 +2412,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922599384821 stripped
@@ -2257,6 +2445,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2302,10 +2498,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Videos
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922435395252 stripped
@@ -2323,6 +2531,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2368,10 +2584,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: minecraft mods 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922418922426 stripped
@@ -2389,6 +2617,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2434,10 +2670,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Important
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922222850924 stripped
@@ -2455,6 +2703,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2500,6 +2756,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: bouncin_buddies_b....
@@ -2507,7 +2771,7 @@ PrefabInstance:
     - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0542b3dbd3a35f469088cb676d2cc34, type: 3}
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922219801430 stripped
@@ -2525,6 +2789,14 @@ PrefabInstance:
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1936938400371782985, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2570,10 +2842,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder Shortcut (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128691764522254609, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4406899292829433711, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
       propertyPath: m_text
       value: Movies (legal)
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465185385810004, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1952395065, guid: a46e62e5f111049da978e2ca5d3b1bf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d5be6cabbbdc04597387fa137d7510, type: 3}
 --- !u!4 &6655695922074415032 stripped
