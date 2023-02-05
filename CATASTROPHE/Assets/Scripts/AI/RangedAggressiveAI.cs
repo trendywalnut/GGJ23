@@ -8,6 +8,7 @@ public class RangedAggressiveAI : MonoBehaviour
 
     //[SerializeField]
     //float moveSpeed;
+    [SerializeField] private AudioClip projectileSpawnSFX;
 
     [SerializeField]
     float health = 10f;
@@ -160,6 +161,8 @@ public class RangedAggressiveAI : MonoBehaviour
             Vector3 targetPosition = (target.transform.position - transform.position).normalized;
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
             bullet.GetComponent<Projectile>().SetVelocity(targetPosition);
+            //sfx
+            AudioManager.instance.EnemySFXPlayer(projectileSpawnSFX);
             //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             //rb.AddForce(targetPosition * bulletForce, ForceMode2D.Impulse);
             yield return new WaitForSeconds(attackSpeed);

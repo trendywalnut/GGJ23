@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c972f67fb6f4fd6bfe40c479d196b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpawnSFX: {fileID: 8300000, guid: f220fdf3389c54bedadd2fa2bf309598, type: 3}
   health: 5
   attackPower: 1
   attackDistance: 15
