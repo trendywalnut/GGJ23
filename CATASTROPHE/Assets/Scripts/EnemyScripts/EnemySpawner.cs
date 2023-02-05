@@ -6,9 +6,9 @@ public class EnemySpawner : MonoBehaviour
 {
     public static EnemySpawner Instance { get; private set; }
 
-    [SerializeField] private GameObject meleeEnemy;
-    [SerializeField] private GameObject rangedEnemy;
-    [SerializeField] private GameObject rangedAggroEnemy;
+    [SerializeField] private GameObject[] meleeEnemy;
+    [SerializeField] private GameObject[] rangedEnemy;
+    [SerializeField] private GameObject[] rangedAggroEnemy;
 
     [SerializeField] private List<Transform> enemySpawners = new List<Transform>();
 
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < waveToSpawn.meleeEnemiesToSpawn; i++)
         {
             Transform spawnerToUse = ChooseRandomEnemySpawner();
-            Instantiate(meleeEnemy, spawnerToUse.position, Quaternion.identity);
+            Instantiate(meleeEnemy[Random.Range(0, meleeEnemy.Length)], spawnerToUse.position, Quaternion.identity);
         }
 
         // Spawn Melee Enemies (30% chance to spawn aggro version)
@@ -34,11 +34,11 @@ public class EnemySpawner : MonoBehaviour
 
             if (chooseRanged <= 2)
             {
-                Instantiate(rangedAggroEnemy, spawnerToUse.position, Quaternion.identity);
+                Instantiate(rangedAggroEnemy[Random.Range(0, rangedAggroEnemy.Length)], spawnerToUse.position, Quaternion.identity);
             }
             else
             {
-                Instantiate(rangedEnemy, spawnerToUse.position, Quaternion.identity);
+                Instantiate(rangedEnemy[Random.Range(0, rangedEnemy.Length)], spawnerToUse.position, Quaternion.identity);
             }
         }
     }
