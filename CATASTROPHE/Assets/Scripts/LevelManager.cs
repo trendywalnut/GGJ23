@@ -31,8 +31,8 @@ public class LevelManager : MonoBehaviour
 
         foreach (GameObject i in levels)
         {
-            if (!(i == previousLevel))
-                i.SetActive(false);
+            i.SetActive(false);
+
         }
         levels[levelNum].SetActive(true);
 
