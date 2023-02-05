@@ -36,6 +36,9 @@ public class PlayerHealth : MonoBehaviour
     {
         StartCoroutine(HitEffect());
         PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
+        //VFX
+        Instantiate(Resources.Load("VFX_Damage_Player"), transform.position, transform.rotation);
+        //reduce health
         if (currentHealth - damageAmount <= 0)
         {
             //Lose state
