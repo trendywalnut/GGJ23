@@ -154,7 +154,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void resetRotate()
     {
-        animator.SetBool("isDash", false);
         StartCoroutine(rotateResetTimer());
     }
 
@@ -167,5 +166,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
+        animator.SetBool("isDash", false);
     }
 }

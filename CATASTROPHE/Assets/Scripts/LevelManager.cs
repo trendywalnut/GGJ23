@@ -34,15 +34,15 @@ public class LevelManager : MonoBehaviour
             if (!(i == previousLevel))
                 i.SetActive(false);
         }
-        //levels[levelNum].SetActive(true);
+        levels[levelNum].SetActive(true);
 
-        // Visual Transition
-        StartCoroutine(BackgroundTransition());
+        //// Visual Transition
+        //StartCoroutine(BackgroundTransition());
     }
 
-    IEnumerator BackgroundTransition()
-    {
-        //previousLevel.GetComponentInChildren
-        yield return null;
-    }
+    //IEnumerator BackgroundTransition()
+    //{
+        
+    //    yield return null;
+    //}
 }
