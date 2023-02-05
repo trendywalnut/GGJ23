@@ -46,15 +46,19 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("Move Input: " + moveInput);
         mousePosition = mainCam.ScreenToWorldPoint(playerInput.playerMap.Mouse.ReadValue<Vector2>());
         rb.velocity = moveInput.normalized * moveSpeed;
-        if(rb.velocity.x > 0 || rb.velocity.y > 0)
+        if(rb.velocity.x > 0)
         {
             animator.SetBool("isRunning", true);
             spriteRenderer.flipX = false;
         }
-        else if(rb.velocity.x < 0 || rb.velocity.y < 0)
+        else if(rb.velocity.x < 0)
         {
             animator.SetBool("isRunning", true);
             spriteRenderer.flipX = true;
+        }
+        else if(rb.velocity.y < 0 || rb.velocity.y > 0)
+        {
+            animator.SetBool("isRunning", true);
         }
         else
         {
