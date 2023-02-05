@@ -156,7 +156,7 @@ public class RangedAI : MonoBehaviour
         //TODO
         IEnumerator DoAttack()
         {
-            Debug.Log("Shooting");
+            //Debug.Log("Shooting");
             Vector3 targetPosition = (target.transform.position - transform.position).normalized;
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
             bullet.GetComponent<Projectile>().SetVelocity(targetPosition);

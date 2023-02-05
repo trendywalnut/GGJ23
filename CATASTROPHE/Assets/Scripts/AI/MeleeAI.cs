@@ -164,7 +164,7 @@ public class MeleeAI : MonoBehaviour
         {
             if (collision.tag == "Player" && !target.GetComponent<PlayerMovement>().isDashing)
             {
-                Debug.Log("Hit Player - Melee Enemy");
+                //Debug.Log("Hit Player - Melee Enemy");
                 hitPlayerDuringAttack = true;
             }
         }

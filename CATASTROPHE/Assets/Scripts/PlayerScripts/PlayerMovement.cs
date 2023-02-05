@@ -42,11 +42,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         moveInput = playerInput.playerMap.Movement.ReadValue<Vector2>(); // Reads Vector2 from WASD or Left Stick
-        if (moveInput != Vector2.zero)
-            //Debug.Log("Move Input: " + moveInput);
-        mousePosition = mainCam.ScreenToWorldPoint(playerInput.playerMap.Mouse.ReadValue<Vector2>());
+        
+        mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
         rb.velocity = moveInput.normalized * moveSpeed;
-        if(rb.velocity.x > 0)
+
+        if (rb.velocity.x > 0)
         {
             animator.SetBool("isRunning", true);
             spriteRenderer.flipX = false;
