@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BossAttackSM : StateMachine
 {
-    
+    public static BossAttackSM Instance { get; private set; }
+
     // Add states here
     public Idling idleState;
     public AttackingRanged attackingRangedState;
@@ -18,6 +19,7 @@ public class BossAttackSM : StateMachine
     public Transform bossTransform;
     public float idleTime;
     public float timeBetweenRangeAttacks;
+    public float timeToMeleeAttack;
 
     public int numberOfBullets;
 
@@ -25,6 +27,8 @@ public class BossAttackSM : StateMachine
 
     private void Awake()
     {
+        Instance = this;
+
         //Construct states here
         idleState = new Idling(this);
         attackingRangedState = new AttackingRanged(this);
