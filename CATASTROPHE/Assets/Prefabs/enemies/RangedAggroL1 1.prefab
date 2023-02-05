@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b89c110b9bc604391f3f0fa2223fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 8300000, guid: 8f3941876df21475f8829507fccca548, type: 3}
+  deathSFX: {fileID: 8300000, guid: 521b09d418fdd4947aa1c62d8c4fec5d, type: 3}
   maxHealth: 1
   knockbackAmount: 20
   knockbackTime: 0.25

@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class EnemyHealth : MonoBehaviour, IDamageable
 {
+    [SerializeField] private AudioClip hitSFX;
+    [SerializeField] private AudioClip deathSFX;
     [SerializeField][Range(1,3)] private int maxHealth;
     [SerializeField] private float knockbackAmount;
     [SerializeField] private float knockbackTime;
@@ -36,6 +38,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         if(maxHealth <= 0)
         {
             //death noise
+            AudioManager.instance.EnemySFXPlayer(hitSFX);
             EnemyManager.Instance.aliveEnemies--;
             //Destroy(gameObject);
             StartCoroutine(EnemyDeathTween());
@@ -65,6 +68,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), timeToTweenOnDeath);
         transform.DORotate(new Vector3(0, 0, 180), timeToTweenOnDeath);
         GetComponent<SpriteRenderer>().DOFade(0, timeToTweenOnDeath);
+        //sfx
+        AudioManager.instance.EnemySFXPlayer(deathSFX);
 
         //Transform playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         //GetComponent<UnityEngine.AI.NavMeshAgent>().velocity = (transform.position - playerPos.position).normalized * knockbackAmount;
