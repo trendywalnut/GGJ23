@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ac19a9e8393e84e983e071e9cfd28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveSFX: {fileID: 8300000, guid: 5cc16772a6f80473592db4bf7e9eac3a, type: 3}
   waveList: []
   enemySpawner: {fileID: 0}
   aliveEnemies: 0
   waveNumber: 0
   allWavesFinished: 0
   timeBetweenWaves: 5
+  levelToLoad: 0

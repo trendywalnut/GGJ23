@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     public static EnemyManager Instance { get; private set; }
 
+    [SerializeField] private AudioClip waveSFX;
     public List<EnemyWave> waveList = new List<EnemyWave>();
     public GameObject enemySpawner;
 
@@ -43,9 +44,11 @@ public class EnemyManager : MonoBehaviour
             if (waveNumber == waveList.Count - 1)
             {
                 // Move on to next area
+                //sfx
+                AudioManager.instance.PlayerSFXPlayer(waveSFX);
                 allWavesFinished = true;
                 LevelManager.instance.ChangeLevel(levelToLoad);
-                //Debug.Log("Move Onto Next Area");
+                
             }
             else if (timer >= timeBetweenWaves)
             {
