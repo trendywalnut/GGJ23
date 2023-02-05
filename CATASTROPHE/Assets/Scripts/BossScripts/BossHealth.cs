@@ -11,6 +11,9 @@ public class BossHealth : MonoBehaviour, IDamageable
 
     public bool isInvulnerable;
 
+    [SerializeField]
+    Animator animator;
+
     private void Awake()
     {
         Instance = this;
@@ -22,6 +25,7 @@ public class BossHealth : MonoBehaviour, IDamageable
     {
         if (!isInvulnerable)
         {
+            animator.SetTrigger("hurt");
             if (currentHealth - damageAmount <= 0)
             {
                 //Boss Dies, Win Game

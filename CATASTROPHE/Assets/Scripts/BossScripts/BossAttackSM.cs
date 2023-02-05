@@ -25,6 +25,7 @@ public class BossAttackSM : StateMachine
     public GameObject rollingMeleeManager;
     public GameObject popUpManager;
     public Transform bossTransform;
+    public Animator animator;
 
     [Header("Timers")]
     public float idleTime;

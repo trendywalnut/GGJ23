@@ -9,6 +9,7 @@ public class Idling : BaseState
     private float timer;
     private BaseState chosenAttack;
 
+
     public Idling(BossAttackSM stateMachine) : base("Idling", stateMachine) 
     {
         sm = stateMachine;
@@ -17,6 +18,7 @@ public class Idling : BaseState
     public override void Enter()
     {
         base.Enter();
+        sm.animator.SetBool("attack", false);
         timer = sm.idleTime;
     }
 
@@ -58,7 +60,7 @@ public class Idling : BaseState
     public override void Exit()
     {
         base.Exit();
-
+        sm.animator.SetBool("attack", true);
         sm.lastAttack = chosenAttack;
     }
 
