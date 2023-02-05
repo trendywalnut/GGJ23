@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
+    public bool invulnerable;
 
     private Material playerMat;
 
@@ -34,19 +35,22 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        StartCoroutine(HitEffect());
-        PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
-        //VFX
-        Instantiate(Resources.Load("VFX_Damage_Player"), transform.position, transform.rotation);
-        //reduce health
-        if (currentHealth - damageAmount <= 0)
+        if (!invulnerable)
         {
-            //Lose state
-        }
-        else
-        {
-            currentHealth -= damageAmount;
-        }
+            StartCoroutine(HitEffect());
+            PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
+            //VFX
+            Instantiate(Resources.Load("VFX_Damage_Player"), transform.position, transform.rotation);
+            //reduce health
+            if (currentHealth - damageAmount <= 0)
+            {
+                //Lose state
+            }
+            else
+            {
+                currentHealth -= damageAmount;
+            }
+        }        
     }
 
     IEnumerator HitEffect()

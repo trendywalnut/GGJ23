@@ -94,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
             playerPosition = new Vector2(transform.position.x, transform.position.y);
             dashDirection = mousePosition - playerPosition;
 
+            PlayerHealth.Instance.invulnerable = true;
+
             canDash = true;
             dashTimer = dashTime;
             cooldownTimer = dashCooldown;
@@ -107,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
+        PlayerHealth.Instance.invulnerable = false;
     }
 
     private void OnEnable()
