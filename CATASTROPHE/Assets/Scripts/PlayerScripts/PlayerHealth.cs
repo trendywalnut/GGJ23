@@ -9,12 +9,15 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
 
+    private Material playerMat;
+
 
 
     private void Awake()
     {
         Instance = this;
         currentHealth = maxHealth;
+        playerMat = GetComponent<Renderer>().material;
     }
 
     public void GainHealth(int healAmount)
@@ -31,6 +34,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        playerMat.EnableKeyword("HITEFFECT_ON");
+        playerMat.DisableKeyword("HITEFFECT_ON");
         PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
         if (currentHealth - damageAmount <= 0)
         {

@@ -5,11 +5,16 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour, IDamageable
 {
     [SerializeField][Range(1,3)] private int maxHealth;
-    
+    private Material enemyMat;
 
+    private void Start()
+    {
+        enemyMat = GetComponent<Renderer>().material;
+    }
     public void TakeDamage(int damage)
     {
-        Debug.Log("take damage");
+        StartCoroutine(HitEffect());
+        //Debug.Log("take damage");
         //hit effect
         //hit noise
         maxHealth -= damage;
@@ -18,5 +23,12 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             //death noise
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator HitEffect()
+    {
+        enemyMat.EnableKeyword("HITEFFECT_ON");
+        yield return new WaitForSeconds(0.2f);
+        enemyMat.DisableKeyword("HITEFFECT_ON");
     }
 }
