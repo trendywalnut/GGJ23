@@ -5,6 +5,9 @@ using UnityEngine;
 public class Moving : BaseState
 {
     private BossMovementSM sm;
+
+    private bool movingLeft = true;
+
     public Moving(BossMovementSM stateMachine) : base("Moving", stateMachine)
     {
         sm = stateMachine;
@@ -18,11 +21,28 @@ public class Moving : BaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
+        if (Vector2.Distance(sm.bossTransform.position, sm.leftMoveBound.position) <= 0.1f)
+        {
+            movingLeft = false;
+        }
+        
+        if (Vector2.Distance(sm.bossTransform.position, sm.rightMoveBound.position) <= 0.1f)
+        {
+            movingLeft = true;
+        }
     }
 
     public override void UpdatePhysics()
     {
         base.UpdatePhysics();
+        if (movingLeft)
+        {
+            sm.bossRb.velocity = Vector2.left * sm.moveSpeed;
+        }
+        else
+        {
+            sm.bossRb.velocity = Vector2.right * sm.moveSpeed;
+        }
     }
 
     public override void Exit()
