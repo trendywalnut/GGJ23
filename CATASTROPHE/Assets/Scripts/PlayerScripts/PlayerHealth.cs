@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth Instance { get; private set; }
 
     [SerializeField] private AudioClip[] hurtSFX;
-    [SerializeField] private int maxHealth;
+    [SerializeField] private int maxHealth = 3;
     [SerializeField] private int currentHealth;
     [SerializeField] private float timeForIFrames;
     public bool invulnerable;
@@ -43,7 +44,6 @@ public class PlayerHealth : MonoBehaviour
         {
             inIFrames = true;
             StartCoroutine(HitEffect());
-            StartCoroutine(HitAnimation());
             StartCoroutine(IFrames());
             PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
             //VFX
@@ -54,9 +54,12 @@ public class PlayerHealth : MonoBehaviour
             if (currentHealth - damageAmount <= 0)
             {
                 // Lose state
+                death();
             }
             else
             {
+                //animation
+                StartCoroutine(HitAnimation());
                 currentHealth -= damageAmount;
             }
         }        
@@ -85,6 +88,25 @@ public class PlayerHealth : MonoBehaviour
         animator.SetBool("isHurt", true);
         yield return new WaitForSeconds(.4f);
         animator.SetBool("isHurt", false);
+    }
+
+    public void death()
+    {
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        animator.SetTrigger("death");
+        Invoke("loadLoseScreen", 3.5f);
+    }
+
+    //spawn the explosion effect after the player death animation
+    public void spawnDeathVFX()
+    {
+        Instantiate(Resources.Load("VFX_Death"), transform.position, transform.rotation);
+    }
+
+    //load lose screen
+    public void loadLoseScreen()
+    {
+        SceneManager.LoadScene("LoseScreen");
     }
 
     //Debug Testing
