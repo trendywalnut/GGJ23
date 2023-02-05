@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -19,12 +20,15 @@ public class PlayerHealth : MonoBehaviour
 
     private Animator animator;
 
+    public TextMeshProUGUI healthUI;
+
     private void Awake()
     {
         Instance = this;
         currentHealth = maxHealth;
         playerMat = GetComponent<Renderer>().material;
         animator = GetComponent<Animator>();
+        healthUI.SetText("Health: " + currentHealth.ToString());
     }
 
     public void GainHealth(int healAmount)
@@ -37,6 +41,8 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth += healAmount;
         }
+
+        healthUI.SetText("Health: " + currentHealth.ToString());
     }
 
     public void TakeDamage(int damageAmount)
@@ -63,6 +69,7 @@ public class PlayerHealth : MonoBehaviour
                 StartCoroutine(HitAnimation());
                 currentHealth -= damageAmount;
             }
+            healthUI.SetText("Health: " + currentHealth.ToString());
         }        
     }
     private AudioClip randomHurt()

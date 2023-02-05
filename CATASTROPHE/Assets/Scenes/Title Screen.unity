@@ -1040,6 +1040,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSFX: {fileID: 0}
   enemySFX: {fileID: 0}
+  dashSFX: {fileID: 0}
+  waveComplete: {fileID: 0}
 --- !u!82 &868126262
 AudioSource:
   m_ObjectHideFlags: 0
