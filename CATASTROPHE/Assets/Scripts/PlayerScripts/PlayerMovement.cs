@@ -28,10 +28,15 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isDashing = false;
 
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
     private void Awake()
     {
         playerInput = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -41,6 +46,21 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("Move Input: " + moveInput);
         mousePosition = mainCam.ScreenToWorldPoint(playerInput.playerMap.Mouse.ReadValue<Vector2>());
         rb.velocity = moveInput.normalized * moveSpeed;
+        if(rb.velocity.x > 0 || rb.velocity.y > 0)
+        {
+            animator.SetBool("isRunning", true);
+            spriteRenderer.flipX = false;
+        }
+        else if(rb.velocity.x < 0 || rb.velocity.y < 0)
+        {
+            animator.SetBool("isRunning", true);
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+            animator.SetBool("isRunning", false);
+        }
 
         if (cooldownTimer > 0)
         {
