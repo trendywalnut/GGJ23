@@ -753,6 +753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSFX: {fileID: 410757346}
   enemySFX: {fileID: 410757345}
+  dashSFX: {fileID: 0}
+  waveComplete: {fileID: 0}
 --- !u!4 &410757348
 Transform:
   m_ObjectHideFlags: 0
