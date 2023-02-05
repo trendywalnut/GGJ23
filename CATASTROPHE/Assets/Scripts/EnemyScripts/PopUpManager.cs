@@ -23,7 +23,7 @@ public class PopUpManager : MonoBehaviour
     private void OnEnable()
     {
         Instance = this;
-        numTotalPopUps = Random.Range(1, 3);
+        numTotalPopUps = Random.Range(1, 4);
 
         popUpsClosed = 0;
         allPopUpsClosed = false;

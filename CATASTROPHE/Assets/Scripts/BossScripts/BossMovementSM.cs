@@ -14,6 +14,7 @@ public class BossMovementSM : StateMachine
 
     public Rigidbody2D bossRb;
     public float moveSpeed;
+    public float halfHealthMoveSpeed;
 
     private void Awake()
     {
@@ -21,6 +22,15 @@ public class BossMovementSM : StateMachine
         movingState = new Moving(this);
         stunnedState = new Stunned(this);
         bossTransform = GetComponent<Transform>();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        if (BossAttackSM.Instance.isHalfHealth)
+        {
+            moveSpeed = halfHealthMoveSpeed;
+        }
     }
 
     protected override BaseState GetInitialState()
