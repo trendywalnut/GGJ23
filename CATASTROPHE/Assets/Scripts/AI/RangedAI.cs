@@ -89,7 +89,6 @@ public class RangedAI : MonoBehaviour
             else
             {
                 Follow();
-                Debug.Log("Follow");
             }
         }
         else
@@ -111,13 +110,11 @@ public class RangedAI : MonoBehaviour
                 {
                     Follow();
                     aggroTimeDelta = aggroTime; //reset aggro
-                    Debug.Log("Follow");
                 }
             }
             else
             {
                 DoPatrol();
-                Debug.Log("Patrolling");
 
             }
 
@@ -147,7 +144,6 @@ public class RangedAI : MonoBehaviour
         //TODO
         IEnumerator DoAttack()
         {
-            Debug.Log("attack");
             Vector3 targetPosition = (target.transform.position - transform.position).normalized;
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(targetPosition.x, targetPosition.y, targetPosition.z));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

@@ -68,7 +68,6 @@ public class MeleeAI : MonoBehaviour
         {
             aggroTimeDelta -= Time.deltaTime;
             float distance = Vector3.Distance(transform.position, target.transform.position);
-            Debug.Log(distance);
 
             if (distance <= attackDistance)
             {
@@ -77,7 +76,6 @@ public class MeleeAI : MonoBehaviour
             else
             {
                 Follow();
-                Debug.Log("Follow");
             }
         }
         else
@@ -87,7 +85,6 @@ public class MeleeAI : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
             {
                 float distance = Vector3.Distance(transform.position, target.transform.position);
-                Debug.Log(distance);
 
                 if (distance <= attackDistance)
                 {
@@ -97,13 +94,11 @@ public class MeleeAI : MonoBehaviour
                 {
                     Follow();
                     aggroTimeDelta = aggroTime; //reset aggro
-                    Debug.Log("Follow");
                 }
             }
             else
             {
                 DoPatrol();
-                Debug.Log("Patrolling");
 
             }
 
@@ -127,8 +122,6 @@ public class MeleeAI : MonoBehaviour
         //TODO
         IEnumerator DoAttack()
         {
-            Debug.Log("attack");
-
             yield return new WaitForSeconds(attackSpeed);
         }
     }
