@@ -698,7 +698,7 @@ MonoBehaviour:
   hurtSFX:
   - {fileID: 8300000, guid: 4e6c7a1cd39d24f0586ca469fa1f3363, type: 3}
   deathSFX: {fileID: 0}
-  maxHealth: 3
+  maxHealth: 5
   currentHealth: 0
   timeForIFrames: 0.8
   invulnerable: 0
