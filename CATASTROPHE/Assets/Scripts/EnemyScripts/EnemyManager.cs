@@ -45,7 +45,7 @@ public class EnemyManager : MonoBehaviour
             {
                 // Move on to next area
                 //sfx
-                AudioManager.instance.PlayerSFXPlayer(waveSFX);
+                AudioManager.instance.WaveCompletePlayer(waveSFX);
                 allWavesFinished = true;
                 LevelManager.instance.ChangeLevel(levelToLoad);
                 
