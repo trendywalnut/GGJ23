@@ -22,6 +22,9 @@ public class RangedAI : MonoBehaviour
     float attackSpeed = 2f;
 
     [SerializeField]
+    float bulletForce = 2f;
+
+    [SerializeField]
     float backAwayDistance = 7f;
 
     [SerializeField]
@@ -38,6 +41,9 @@ public class RangedAI : MonoBehaviour
 
     [SerializeField]
     GameObject target;
+
+    [SerializeField]
+    GameObject projectile;
 
     NavMeshAgent agent;
 
@@ -142,7 +148,10 @@ public class RangedAI : MonoBehaviour
         IEnumerator DoAttack()
         {
             Debug.Log("attack");
-
+            Vector3 targetPosition = (target.transform.position - transform.position).normalized;
+            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(targetPosition.x, targetPosition.y, targetPosition.z));
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(targetPosition * bulletForce, ForceMode2D.Impulse);
             yield return new WaitForSeconds(attackSpeed);
         }
     }
