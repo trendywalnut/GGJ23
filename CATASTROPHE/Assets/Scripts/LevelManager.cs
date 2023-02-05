@@ -24,7 +24,8 @@ public class LevelManager : MonoBehaviour
     {
         foreach(GameObject i in levels)
         {
-
+            i.SetActive(false);
         }
+        levels[levelNum].SetActive(true);
     }
 }

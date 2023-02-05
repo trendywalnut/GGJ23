@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            spriteRenderer.flipX = false;
             animator.SetBool("isRunning", false);
         }
 
@@ -101,9 +100,6 @@ public class PlayerMovement : MonoBehaviour
 
             // Animation Stuff
             animator.SetBool("isDash", true);
-            float angle = Mathf.Atan2(dashDirection.y, dashDirection.x) * Mathf.Rad2Deg;
-            if (angle < -90 || angle > 90) { spriteRenderer.flipY = true; }
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 
@@ -111,11 +107,6 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
-
-        // Animation Stuff
-        animator.SetBool("isDash", false);
-        transform.rotation = Quaternion.identity;
-        spriteRenderer.flipY = false;
     }
 
     private void OnEnable()
@@ -126,5 +117,30 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable()
     {
         playerInput.playerMap.Disable();
+    }
+
+    // Animation Stuff
+    public void rotateSprite()
+    {
+        float angle = Mathf.Atan2(dashDirection.y, dashDirection.x) * Mathf.Rad2Deg;
+        if (angle < -90f || angle > 90f)
+        {
+            spriteRenderer.flipY = true;
+        }
+
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    public void resetRotate()
+    {
+        animator.SetBool("isDash", false);
+        StartCoroutine(rotateResetTimer());
+    }
+
+    IEnumerator rotateResetTimer()
+    {
+        yield return new WaitForSeconds(.05f);
+        transform.rotation = Quaternion.identity;
+        spriteRenderer.flipY = false;
     }
 }

@@ -8,6 +8,7 @@ public class PlayerDashAttack : MonoBehaviour
     [SerializeField] private int dashAttackDamage = 1;
 
     private IDamageable enemy;
+    private IDamageable boss;
     private PlayerMovement _playerMovement;
     void Start()
     {
@@ -20,6 +21,12 @@ public class PlayerDashAttack : MonoBehaviour
         {
             enemy = other.GetComponent<IDamageable>();
             enemy?.TakeDamage(dashAttackDamage);
+        }
+
+        if (other.CompareTag("Boss") && _playerMovement.isDashing)
+        {
+            boss = other.GetComponent<IDamageable>();
+            boss?.TakeDamage(dashAttackDamage);
         }
     }
 }

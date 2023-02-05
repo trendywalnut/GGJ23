@@ -23,6 +23,7 @@ public class BossAttackSM : StateMachine
     public GameObject meleeAttack;
     public GameObject bossEnemyManager;
     public GameObject rollingMeleeManager;
+    public GameObject popUpManager;
     public Transform bossTransform;
 
     [Header("Timers")]
@@ -51,7 +52,7 @@ public class BossAttackSM : StateMachine
 
         //Add all attack states to attackStates list
         attackStates.Add(attackingRangedState);
-        attackStates.Add(attackingMeleeState);
+        //attackStates.Add(attackingMeleeState);
         attackStates.Add(rollingMeleeState);
         attackStates.Add(spawningEnemiesState);
         attackStates.Add(spawningPopupsState);
@@ -69,6 +70,6 @@ public class BossAttackSM : StateMachine
 
     protected override BaseState GetInitialState()
     {
-        return spawningEnemiesState;
+        return spawningPopupsState;
     }
 }
