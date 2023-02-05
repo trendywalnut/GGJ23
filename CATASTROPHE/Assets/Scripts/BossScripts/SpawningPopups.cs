@@ -14,12 +14,19 @@ public class SpawningPopups : BaseState
     public override void Enter()
     {
         base.Enter();
+
+        sm.popUpManager.SetActive(true);
+        BossHealth.Instance.isInvulnerable = true;
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        stateMachine.ChangeState(sm.idleState);
+        
+        if (sm.popUpManager.GetComponent<PopUpManager>().allPopUpsClosed)
+        {
+            stateMachine.ChangeState(sm.idleState);
+        }
     }
 
     public override void UpdatePhysics()
@@ -30,6 +37,9 @@ public class SpawningPopups : BaseState
     public override void Exit()
     {
         base.Exit();
-    }
 
+        sm.popUpManager.GetComponent<PopUpManager>().allPopUpsClosed = false;
+        sm.popUpManager.SetActive(false);
+        BossHealth.Instance.isInvulnerable = false;
+    }
 }
