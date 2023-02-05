@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
+
+    [SerializeField] private AudioClip[] dashSFX;
     
     private float dashTimer;
     private float cooldownTimer;
@@ -103,7 +105,14 @@ public class PlayerMovement : MonoBehaviour
 
             // Animation Stuff
             animator.SetBool("isDash", true);
+            AudioManager.instance.PlayerSFXPlayer(randomMeow());
         }
+    }
+
+    private AudioClip randomMeow()
+    {
+        int i = Random.Range(0, dashSFX.Length);
+        return dashSFX[i];
     }
 
     IEnumerator DashAttackTime()
