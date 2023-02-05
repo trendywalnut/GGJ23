@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7274824282861575031}
   - component: {fileID: 42290384593629576}
   - component: {fileID: -1866393451258639294}
+  - component: {fileID: 3772757147840849701}
   m_Layer: 0
   m_Name: rangedai
   m_TagString: Enemy
@@ -57,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,3 +189,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617cb687ddbd91e4390bc4a96f472d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3772757147840849701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795550996373759092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0

@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager instance;
     //[Header("Internet Tabs")]
 
+    [Header("Levels")]
     [SerializeField]
-    private GameObject tab1, tab2, tab3;
+    private GameObject[] levels;
 
-    //[Header("Desktops")]
-    [SerializeField]
-    private GameObject desktop1, desktop2, desktop3;
-
-    //[Header("File Explorer")]
-    [SerializeField]
-    private GameObject downloads, firewall, commandPrompt;
+    
 
     void Start()
     {
-        tab1.SetActive(true);
+        instance = this;
+        //set level1 active
+        //levels[0].SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeLevel(int levelNum)
     {
-        
+        foreach(GameObject i in levels)
+        {
+
+        }
     }
 }
