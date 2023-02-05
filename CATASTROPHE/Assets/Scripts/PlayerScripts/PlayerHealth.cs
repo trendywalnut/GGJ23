@@ -12,13 +12,14 @@ public class PlayerHealth : MonoBehaviour
 
     private Material playerMat;
 
-
+    private Animator animator;
 
     private void Awake()
     {
         Instance = this;
         currentHealth = maxHealth;
         playerMat = GetComponent<Renderer>().material;
+        animator = GetComponent<Animator>();
     }
 
     public void GainHealth(int healAmount)
@@ -38,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         if (!invulnerable)
         {
             StartCoroutine(HitEffect());
+            StartCoroutine(HitAnimation());
             PlayerCameraEffects.Instance.ShakeCamera(2, .1f);
             //VFX
             Instantiate(Resources.Load("VFX_Damage_Player"), transform.position, transform.rotation);
@@ -58,6 +60,13 @@ public class PlayerHealth : MonoBehaviour
         playerMat.EnableKeyword("HITEFFECT_ON");
         yield return new WaitForSeconds(0.2f);
         playerMat.DisableKeyword("HITEFFECT_ON");
+    }
+
+    IEnumerator HitAnimation()
+    {
+        animator.SetBool("isHurt", true);
+        yield return new WaitForSeconds(.4f);
+        animator.SetBool("isHurt", false);
     }
 
     //Debug Testing
