@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class DashCombo : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class DashCombo : MonoBehaviour
     {
         comboNum++;
         changed = true;
+        
     }
 
     IEnumerator ResetCombo()
