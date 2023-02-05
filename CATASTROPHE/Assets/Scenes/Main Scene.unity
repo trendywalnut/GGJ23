@@ -528,6 +528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Windows Firewall Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4619075717512866674, guid: 7c83fd24ac0470d4d86add86c8c65dd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c83fd24ac0470d4d86add86c8c65dd6, type: 3}
 --- !u!4 &312987716 stripped
@@ -1322,6 +1326,10 @@ PrefabInstance:
     - target: {fileID: 4619075717512866674, guid: 7c83fd24ac0470d4d86add86c8c65dd6, type: 3}
       propertyPath: m_Name
       value: Windows Firewall Spawner right
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619075717512866674, guid: 7c83fd24ac0470d4d86add86c8c65dd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c83fd24ac0470d4d86add86c8c65dd6, type: 3}
@@ -5936,7 +5944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1617712337
 Transform:
   m_ObjectHideFlags: 0
