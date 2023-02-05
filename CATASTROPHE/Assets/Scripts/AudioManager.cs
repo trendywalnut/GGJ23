@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource playerSFX;
     public AudioSource enemySFX;
     public AudioSource dashSFX;
+    public AudioSource waveComplete;
 
     public void PlayerSFXPlayer (AudioClip SFX)
     {
@@ -31,4 +32,11 @@ public class AudioManager : MonoBehaviour
         dashSFX.clip = SFX;
         dashSFX.Play();
     }
+
+    public void WaveCompletePlayer (AudioClip SFX)
+    {
+        waveComplete.clip = SFX;
+        waveComplete.Play();
+    }
+
 }
