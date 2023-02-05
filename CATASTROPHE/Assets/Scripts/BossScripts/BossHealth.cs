@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour, IDamageable
 {
@@ -28,7 +29,7 @@ public class BossHealth : MonoBehaviour, IDamageable
             animator.SetTrigger("hurt");
             if (currentHealth - damageAmount <= 0)
             {
-                //Boss Dies, Win Game
+                SceneManager.LoadScene(sceneName: "End Screen");
             }
             else
             {
