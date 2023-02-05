@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public static PlayerHealth Instance { get; private set; }
 
     [SerializeField] private AudioClip[] hurtSFX;
+    [SerializeField] private AudioClip deathSFX;
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private int currentHealth;
     [SerializeField] private float timeForIFrames;
@@ -93,6 +94,8 @@ public class PlayerHealth : MonoBehaviour
     public void death()
     {
         GetComponent<CapsuleCollider2D>().enabled = false;
+        //sfx
+        AudioManager.instance.PlayerSFXPlayer(randomHurt());
         animator.SetTrigger("death");
         Invoke("loadLoseScreen", 3.5f);
     }
