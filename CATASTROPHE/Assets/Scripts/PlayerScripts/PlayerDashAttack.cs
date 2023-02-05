@@ -16,10 +16,8 @@ public class PlayerDashAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("collision");
         if (other.CompareTag("Enemy") && _playerMovement.isDashing)
         {
-            Debug.Log("HIT!!!!!");
             enemy = other.GetComponent<IDamageable>();
             enemy?.TakeDamage(dashAttackDamage);
         }
