@@ -149,7 +149,7 @@ MonoBehaviour:
   maxHealth: 3
   knockbackAmount: 20
   knockbackTime: 0.25
-  timeToTweenOnDeath: 0.5
+  timeToTweenOnDeath: 1
   healthPickup: {fileID: 3995980605721639244, guid: 49cb28ebbbf1aa64ba3ea9687dcf736c, type: 3}
   healthSpawnChance: 0.5
 --- !u!61 &6697032800660302369

@@ -21,6 +21,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     {
         enemyMat = GetComponent<Renderer>().material;
         rb = GetComponent<Rigidbody2D>();
+
+        enemyMat.DisableKeyword("HITEFFECT_ON");
+        enemyMat.DisableKeyword("PIXELATE_ON");
     }
     public void TakeDamage(int damage)
     {
@@ -33,7 +36,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         if(maxHealth <= 0)
         {
             //death noise
-            //EnemyManager.Instance.aliveEnemies--;
+            EnemyManager.Instance.aliveEnemies--;
             //Destroy(gameObject);
             StartCoroutine(EnemyDeathTween());
 
@@ -56,6 +59,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     IEnumerator EnemyDeathTween()
     {
         GetComponent<BoxCollider2D>().enabled = false;
+        enemyMat.EnableKeyword("PIXELATE_ON");
+        enemyMat.DOFloat(0, "_PixelateSize", (timeToTweenOnDeath - (timeToTweenOnDeath/2)));
 
         transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), timeToTweenOnDeath);
         transform.DORotate(new Vector3(0, 0, 180), timeToTweenOnDeath);
