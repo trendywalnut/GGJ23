@@ -65,11 +65,12 @@ public class BossAttackSM : StateMachine
         if ((BossHealth.Instance.currentHealth / BossHealth.Instance.maxHealth) <= 0.5f)
         {
             isHalfHealth = true;
+            idleTime /= 2;
         }
     }
 
     protected override BaseState GetInitialState()
     {
-        return spawningPopupsState;
+        return attackingRangedState;
     }
 }

@@ -156,7 +156,7 @@ public class RangedAggressiveAI : MonoBehaviour
         //TODO
         IEnumerator DoAttack()
         {
-            Debug.Log("Aggro Shooting");
+            //Debug.Log("Aggro Shooting");
             Vector3 targetPosition = (target.transform.position - transform.position).normalized;
             GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
             bullet.GetComponent<Projectile>().SetVelocity(targetPosition);

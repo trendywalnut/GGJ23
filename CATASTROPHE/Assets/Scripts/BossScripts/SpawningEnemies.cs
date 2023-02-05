@@ -15,6 +15,13 @@ public class SpawningEnemies : BaseState
     {
         base.Enter();
 
+        if (sm.isHalfHealth)
+        {
+            sm.bossEnemyManager.GetComponent<EnemyManager>().waveList[0].meleeEnemiesToSpawn *= 2;
+            sm.bossEnemyManager.GetComponent<EnemyManager>().waveList[0].rangedEnemiesToSpawn *= 2;
+        }
+
+
         sm.bossEnemyManager.SetActive(true);
     }
 

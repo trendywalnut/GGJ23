@@ -21,16 +21,10 @@ public class AttackingRanged : BaseState
     {
         base.Enter();
 
-        //Debug.Log("ENTERING RANGE ATTACK");
-
         currentAttack = 0;
-        numAttacks = 2;
+        numAttacks = sm.isHalfHealth ? 4 : 2;
+        Debug.Log(numAttacks);
         timer = sm.timeBetweenRangeAttacks;
-
-        if (sm.isHalfHealth)
-        {
-            numAttacks = 4;
-        }
 
         canShoot = true;
     }
@@ -58,9 +52,12 @@ public class AttackingRanged : BaseState
 
         if (canShoot)
         {
+            Debug.Log("Spawning Bullet Wave #" + currentAttack);
             RangedAttack();
             currentAttack++;
             canShoot = false;
+
+            timer = sm.timeBetweenRangeAttacks;
         }
     }
 
