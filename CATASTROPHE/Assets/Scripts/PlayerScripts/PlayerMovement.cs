@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    
     private void Awake()
     {
         playerInput = new PlayerInput();
@@ -137,7 +138,9 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
-        
+
+        //VFX
+        Instantiate(Resources.Load("VFX_Dash"), transform.position, transform.rotation);
     }
 
     public void resetRotate()
