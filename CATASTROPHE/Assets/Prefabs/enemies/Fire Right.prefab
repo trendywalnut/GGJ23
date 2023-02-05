@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileLifetime: 2.5
   projectileSpeed: 3
-  targetDir: {x: 1, y: 0}
+  targetDir: {x: -1, y: 0}
 --- !u!212 &7705851968742414572
 SpriteRenderer:
   m_ObjectHideFlags: 0
