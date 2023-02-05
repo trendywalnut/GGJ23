@@ -179,6 +179,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1216277742506379768, guid: dd923c8ae95ef5f41836579ad39a3e4e, type: 3}
+      propertyPath: levelToLoad
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216277742506379768, guid: dd923c8ae95ef5f41836579ad39a3e4e, type: 3}
       propertyPath: waveList.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -221,6 +225,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1315890125}
     m_Modifications:
+    - target: {fileID: 1069655463364596909, guid: 43e05a9c8f55bfd4899ad8d24b92de30, type: 3}
+      propertyPath: levelToLoad
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069655463364596909, guid: 43e05a9c8f55bfd4899ad8d24b92de30, type: 3}
+      propertyPath: waveList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069655463364596909, guid: 43e05a9c8f55bfd4899ad8d24b92de30, type: 3}
+      propertyPath: waveList.Array.data[0].meleeEnemiesToSpawn
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069655463364596909, guid: 43e05a9c8f55bfd4899ad8d24b92de30, type: 3}
+      propertyPath: waveList.Array.data[0].rangedEnemiesToSpawn
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1559703041270422822, guid: 43e05a9c8f55bfd4899ad8d24b92de30, type: 3}
       propertyPath: m_Name
       value: Tab 2
@@ -1336,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1559703041270422822, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1559703041270422823, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: m_RootOrder
@@ -1383,36 +1403,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
+      propertyPath: levelToLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: timeBetweenWaves
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.data[0].meleeEnemiesToSpawn
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.data[1].meleeEnemiesToSpawn
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.data[2].meleeEnemiesToSpawn
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.data[0].rangedEnemiesToSpawn
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.data[1].rangedEnemiesToSpawn
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106939484504419034, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
       propertyPath: waveList.Array.data[2].rangedEnemiesToSpawn
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc04f4f7f8da9442b0b740c533235db, type: 3}
@@ -3163,6 +3187,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1433611890363129430, guid: d8ec6e6477e5d37419e941317b23020a, type: 3}
+      propertyPath: levelToLoad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433611890363129430, guid: d8ec6e6477e5d37419e941317b23020a, type: 3}
       propertyPath: waveList.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3574,6 +3602,22 @@ PrefabInstance:
     - target: {fileID: 1559703041270422823, guid: 481db45c3cbf3ac46962772054ee407a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256645037408611297, guid: 481db45c3cbf3ac46962772054ee407a, type: 3}
+      propertyPath: levelToLoad
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256645037408611297, guid: 481db45c3cbf3ac46962772054ee407a, type: 3}
+      propertyPath: waveList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256645037408611297, guid: 481db45c3cbf3ac46962772054ee407a, type: 3}
+      propertyPath: waveList.Array.data[0].meleeEnemiesToSpawn
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256645037408611297, guid: 481db45c3cbf3ac46962772054ee407a, type: 3}
+      propertyPath: waveList.Array.data[0].rangedEnemiesToSpawn
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7316194916512586947, guid: 481db45c3cbf3ac46962772054ee407a, type: 3}
       propertyPath: m_NavMeshData
@@ -4709,6 +4753,10 @@ PrefabInstance:
     - target: {fileID: 1326638655607756613, guid: e8b748e78ef093a489d6a25f003ece00, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382136321806527914, guid: e8b748e78ef093a489d6a25f003ece00, type: 3}
+      propertyPath: levelToLoad
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5097137014087746261, guid: e8b748e78ef093a489d6a25f003ece00, type: 3}
       propertyPath: m_NavMeshData
