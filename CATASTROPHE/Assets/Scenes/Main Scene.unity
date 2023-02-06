@@ -1354,6 +1354,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9163457245405940527, guid: 76d33f1f7b3f28c4ea5f669857d4adf3, type: 3}
+      propertyPath: enemySpawner
+      value: 
+      objectReference: {fileID: 2139480941}
     - target: {fileID: 9163457245950586476, guid: 76d33f1f7b3f28c4ea5f669857d4adf3, type: 3}
       propertyPath: popUpManager
       value: 
@@ -1537,6 +1541,14 @@ PrefabInstance:
       propertyPath: rangedAggroEnemy.Array.data[0]
       value: 
       objectReference: {fileID: 5289389861716242523, guid: c2315cac2632ef148a4528ab5b679895, type: 3}
+    - target: {fileID: 5973806103722558738, guid: 8562dd38be4456b4d87311ac888d98b0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973806103722558738, guid: 8562dd38be4456b4d87311ac888d98b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5973806104558403625, guid: 8562dd38be4456b4d87311ac888d98b0, type: 3}
       propertyPath: m_NavMeshData
       value: 
@@ -6968,6 +6980,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1617712337}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2139480941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139480942}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139480942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139480941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.29, y: -9.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 476968491}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4264863346793322923
 PrefabInstance:
