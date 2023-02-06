@@ -1540,7 +1540,7 @@ PrefabInstance:
     - target: {fileID: 5973806104558403625, guid: 8562dd38be4456b4d87311ac888d98b0, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: 0033653115b4386499aada5dbd4dc5f9, type: 2}
+      objectReference: {fileID: 23800000, guid: d3c5c6ab34741f9438d081fd95bd3baa, type: 2}
     - target: {fileID: 6531947519698573896, guid: 8562dd38be4456b4d87311ac888d98b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.88
@@ -7045,6 +7045,14 @@ PrefabInstance:
       propertyPath: hurtSFX.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 4e6c7a1cd39d24f0586ca469fa1f3363, type: 3}
+    - target: {fileID: 1234119507749623678, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 105.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234119507749623678, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -59.899994
+      objectReference: {fileID: 0}
     - target: {fileID: 7311764271283245002, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7097,5 +7105,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1413868581}
+    - target: {fileID: 9056240981651805132, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 138
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
