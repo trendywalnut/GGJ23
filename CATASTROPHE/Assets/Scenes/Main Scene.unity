@@ -7293,14 +7293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5585423588170464742, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_margin.x
-      value: 437.80475
-      objectReference: {fileID: 0}
-    - target: {fileID: 5585423588170464742, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
-      propertyPath: m_margin.y
-      value: -7.387575
-      objectReference: {fileID: 0}
     - target: {fileID: 7311764271283245002, guid: 9cd97c509182d8f4e89017c5659dc719, type: 3}
       propertyPath: m_RootOrder
       value: 4
