@@ -61,6 +61,8 @@ public class PlayerHealth : MonoBehaviour
             if (currentHealth - damageAmount <= 0)
             {
                 // Lose state
+                currentHealth -= damageAmount;
+                healthUI.SetText(currentHealth.ToString());
                 death();
             }
             else
