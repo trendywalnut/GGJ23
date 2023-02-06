@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         playerMat = GetComponent<Renderer>().material;
         animator = GetComponent<Animator>();
-        healthUI.SetText("Health: " + currentHealth.ToString());
+        healthUI.SetText(currentHealth.ToString());
     }
 
     public void GainHealth(int healAmount)
@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth += healAmount;
         }
 
-        healthUI.SetText("Health: " + currentHealth.ToString());
+        healthUI.SetText(currentHealth.ToString());
     }
 
     public void TakeDamage(int damageAmount)
@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
                 StartCoroutine(HitAnimation());
                 currentHealth -= damageAmount;
             }
-            healthUI.SetText("Health: " + currentHealth.ToString());
+            healthUI.SetText(currentHealth.ToString());
         }        
     }
     private AudioClip randomHurt()

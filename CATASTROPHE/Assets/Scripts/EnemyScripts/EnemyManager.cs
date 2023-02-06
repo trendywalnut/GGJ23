@@ -16,6 +16,7 @@ public class EnemyManager : MonoBehaviour
     public int waveNumber;
 
     public bool allWavesFinished;
+    public bool dontLoadLevel = false;
 
     [SerializeField] private float timeBetweenWaves;
     [SerializeField] private int levelToLoad;
@@ -47,7 +48,8 @@ public class EnemyManager : MonoBehaviour
                 //sfx
                 AudioManager.instance.WaveCompletePlayer(waveSFX);
                 allWavesFinished = true;
-                LevelManager.instance.ChangeLevel(levelToLoad);
+                if (!dontLoadLevel)
+                    LevelManager.instance.ChangeLevel(levelToLoad);
                 
             }
             else if (timer >= timeBetweenWaves)

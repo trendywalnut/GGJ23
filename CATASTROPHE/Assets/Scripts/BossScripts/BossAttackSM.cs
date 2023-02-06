@@ -72,6 +72,6 @@ public class BossAttackSM : StateMachine
 
     protected override BaseState GetInitialState()
     {
-        return attackingRangedState;
+        return spawningEnemiesState;
     }
 }
